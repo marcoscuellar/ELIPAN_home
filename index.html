@@ -157,6 +157,40 @@
   .brand .dom { font-family: var(--font-mono); font-size: 12px; color: var(--muted); letter-spacing: .04em; }
   .brand .go .arr { display: inline-block; transition: transform 200ms ease; }
   .brand:hover .go .arr { transform: translateX(3px); }
+  /* bento brand grid (motion.dev style): one big tile, two small, one wide */
+  .brands.bento { grid-template-columns: repeat(6, 1fr); grid-template-areas: "n n n n w w" "n n n n y y" "o o o o o o"; }
+  .brands.bento > .brand { grid-column: auto; cursor: pointer; }
+  .brands.bento > .b-n { grid-area: n; } .brands.bento > .b-w { grid-area: w; } .brands.bento > .b-y { grid-area: y; } .brands.bento > .b-o { grid-area: o; }
+  .brands.bento > .b-n .photo { aspect-ratio: auto; flex: 1; min-height: 300px; }
+  .brands.bento > .b-n .brand-body { flex: none; }
+  .brands.bento > .b-n h3 { font-size: clamp(32px, 3.4vw, 44px); }
+  .brands.bento > .b-o { flex-direction: row; }
+  .brands.bento > .b-o .photo { width: 46%; aspect-ratio: 16 / 9; margin: 14px 0 14px 14px; flex: none; }
+  .brand .more-i { display: inline-flex; align-items: center; gap: 6px; }
+  .brand .more-i i { font-style: normal; display: inline-grid; place-items: center; width: 24px; height: 24px; border-radius: 50%; background: var(--sage-tint); color: var(--sage-ink); font-size: 16px; line-height: 1; transition: transform 250ms var(--ease); }
+  .brand:hover .more-i i { transform: rotate(90deg); }
+  .brand.ep-hide { visibility: hidden; }
+  @media (max-width: 1000px) { .brands.bento { grid-template-columns: 1fr 1fr; grid-template-areas: "n n" "w y" "o o"; } }
+  @media (max-width: 640px) { .brands.bento { grid-template-columns: 1fr; grid-template-areas: "n" "w" "y" "o"; } .brands.bento > .b-n .photo { aspect-ratio: 16 / 9; min-height: 0; flex: none; } .brands.bento > .b-n .brand-body { flex: 1; } .brands.bento > .b-o { flex-direction: column; } .brands.bento > .b-o .photo { width: auto; margin: 14px 14px 0; } }
+
+  /* story panel: the tapped tile grows into this */
+  .ep-dlg { border: 0; padding: 0; width: min(640px, calc(100vw - 24px)); max-width: none; max-height: calc(100dvh - 32px); border-radius: var(--panel-r); background: var(--card); color: var(--ink); box-shadow: var(--shadow-lift); overflow: hidden; transform-origin: 0 0; }
+  .ep-dlg::backdrop { background: rgba(10,10,10,.5); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); }
+  .ep-in { overflow: auto; max-height: calc(100dvh - 32px); }
+  .ep-ph { position: relative; aspect-ratio: 16 / 9; margin: 14px 14px 0; border-radius: 12px; overflow: hidden; background: var(--raised); }
+  .ep-ph img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .ep-x { position: absolute; top: 12px; right: 12px; appearance: none; width: 44px; height: 44px; border-radius: 50%; border: 0; background: rgba(255,255,255,.92); color: #0A0A0A; font-size: 24px; line-height: 1; cursor: pointer; box-shadow: 0 2px 10px rgba(0,0,0,.18); }
+  .ep-x:hover { background: #FFFFFF; }
+  .ep-body { padding: 24px clamp(22px, 4vw, 36px) clamp(26px, 4vw, 36px); }
+  .ep-tags { display: flex; gap: 8px; flex-wrap: wrap; }
+  .ep-st::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--sage); margin-right: 8px; }
+  .ep-dlg h2 { margin-top: 14px; font-size: clamp(32px, 4.4vw, 44px); font-weight: 800; letter-spacing: -.03em; line-height: 1.04; }
+  .ep-tag { margin-top: 8px; color: var(--muted); font-size: 18px; }
+  .ep-sec { margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--line); }
+  .ep-sec h3 { font-family: var(--font-mono); font-size: 12px; font-weight: 500; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); margin-bottom: 8px; }
+  .ep-sec p, .ep-sec ul { margin: 0; font-size: 16px; line-height: 1.6; color: var(--ink); }
+  .ep-sec ul { padding-left: 20px; } .ep-sec li + li { margin-top: 4px; }
+  .ep-go { margin-top: 26px; width: 100%; }
   .more { margin-top: 28px; color: var(--muted); font-size: 15px; }
 
   /* contact form */
@@ -373,22 +407,22 @@
       <h2 id="brands-h">What our brands help you do.</h2>
       <p>Each brand keeps its own name and audience. All of them share one standard for research, design and judgment.</p>
     </div>
-      <div class="brands" data-float>
-        <a class="brand" href="https://www.mynenemi.com/">
+      <div class="brands bento" data-float>
+        <a class="brand b-n" href="https://www.mynenemi.com/" data-story="ep-nenemi" aria-haspopup="dialog">
           <div class="photo"><img src="/img/nenemi.webp" width="1024" height="576" loading="lazy" decoding="async" alt="A couple laughing while putting groceries away in a bright kitchen, a parent smiling nearby and the dog watching"></div>
-          <div class="brand-body"><span class="tag">ADHD workspace</span><h3>NENEMI</h3><p>Keep your place.</p><div class="go"><span class="dom">mynenemi.com</span><span>Visit <span class="arr" aria-hidden="true">→</span></span></div></div>
+          <div class="brand-body"><span class="tag">ADHD workspace</span><h3>NENEMI</h3><p>Keep your place.</p><div class="go"><span class="dom">mynenemi.com</span><span class="more-i">See the story <i aria-hidden="true">+</i></span></div></div>
         </a>
-        <a class="brand" href="https://www.makingcuepa.com/">
+        <a class="brand b-w" href="https://www.makingcuepa.com/" data-story="ep-cuepa-work" aria-haspopup="dialog">
           <div class="photo"><img src="/img/cuepa-work.webp" width="1024" height="576" loading="lazy" decoding="async" alt="A small team reviewing a tablet and laptop together at a rooftop table"></div>
-          <div class="brand-body"><span class="tag">Small-business workflows</span><h3>Cuepa for Work</h3><p>Make the work easier to follow.</p><div class="go"><span class="dom">makingcuepa.com</span><span>Visit <span class="arr" aria-hidden="true">→</span></span></div></div>
+          <div class="brand-body"><span class="tag">Small-business workflows</span><h3>Cuepa for Work</h3><p>Make the work easier to follow.</p><div class="go"><span class="dom">makingcuepa.com</span><span class="more-i">See the story <i aria-hidden="true">+</i></span></div></div>
         </a>
-        <a class="brand" href="https://you.makingcuepa.com/">
+        <a class="brand b-y" href="https://you.makingcuepa.com/" data-story="ep-cuepa-you" aria-haspopup="dialog">
           <div class="photo"><img src="/img/cuepa-you.webp" width="1024" height="576" loading="lazy" decoding="async" alt="Friends gathered on a backyard patio at dusk as a birthday cake comes out"></div>
-          <div class="brand-body"><span class="tag">Everyday life</span><h3>Cuepa for You</h3><p>Make everyday life easier to run.</p><div class="go"><span class="dom">you.makingcuepa.com</span><span>Visit <span class="arr" aria-hidden="true">→</span></span></div></div>
+          <div class="brand-body"><span class="tag">Everyday life</span><h3>Cuepa for You</h3><p>Make everyday life easier to run.</p><div class="go"><span class="dom">you.makingcuepa.com</span><span class="more-i">See the story <i aria-hidden="true">+</i></span></div></div>
         </a>
-        <a class="brand" href="https://www.ollinos.com/">
+        <a class="brand b-o" href="https://www.ollinos.com/" data-story="ep-ollin-os" aria-haspopup="dialog">
           <div class="photo"><img src="/img/ollin-os.webp" width="1024" height="576" loading="lazy" decoding="async" alt="Three professionals talking and laughing over a laptop at a busy rooftop networking event"></div>
-          <div class="brand-body"><span class="tag">Staffing sales intelligence</span><h3>ŌLLIN OS</h3><p>We find the signal. You build the relationship. ŌLLIN GO is built in, and nothing sends without your yes.</p><div class="go"><span class="dom">ollinos.com</span><span>Visit <span class="arr" aria-hidden="true">→</span></span></div></div>
+          <div class="brand-body"><span class="tag">Staffing sales intelligence</span><h3>ŌLLIN OS</h3><p>We find the signal. You build the relationship. ŌLLIN GO is built in, and nothing sends without your yes.</p><div class="go"><span class="dom">ollinos.com</span><span class="more-i">See the story <i aria-hidden="true">+</i></span></div></div>
         </a>
       </div>
     <p class="more">More in the works now.</p>
@@ -539,6 +573,106 @@
         (function tick(t) { var p = Math.min(1, (t - t0) / 900); el.textContent = Math.round(to * (1 - Math.pow(1 - p, 3))); if (p < 1) requestAnimationFrame(tick); })(t0);
       });
     }
+  })();
+</script>
+
+<!-- Brand stories: public marketing copy only -->
+<dialog class="ep-dlg" id="ep-nenemi" aria-labelledby="ep-nenemi-t">
+ <div class="ep-in">
+  <div class="ep-ph"><img src="/img/nenemi.webp" alt="" decoding="async"><button class="ep-x" type="button" aria-label="Close">×</button></div>
+  <div class="ep-body">
+   <div class="ep-tags"><span class="tag ep-st">Live</span><span class="tag">ADHD workspace</span></div>
+   <h2 id="ep-nenemi-t">NENEMI</h2>
+   <p class="ep-tag">Keep your place.</p>
+   <div class="ep-sec"><h3>The problem</h3><p>You lose your list by 10 AM, hit a wall by 1 PM and feel spent by 5.</p></div>
+   <div class="ep-sec"><h3>Who it&rsquo;s for</h3><p>Non-linear and ADHD minds.</p></div>
+   <div class="ep-sec"><h3>What you get</h3><ul><li>It remembers where you left off, so you don&rsquo;t lose your place</li><li>One small next move, not a mountain</li><li>A short Today view. The rest waits safely</li><li>When you freeze, it shrinks the first step until it feels doable</li><li>Your plan shows up in your calendar</li></ul></div>
+   <div class="ep-sec"><h3>The name</h3><p>From Nahuatl, &ldquo;to walk&rdquo; or &ldquo;to go about.&rdquo; Your path doesn&rsquo;t have to be straight to keep moving.</p></div>
+   <a class="btn btn-primary ep-go" href="https://www.mynenemi.com/" target="_blank" rel="noopener">Visit mynenemi.com <span class="arr" aria-hidden="true">→</span></a>
+  </div>
+ </div>
+</dialog>
+<dialog class="ep-dlg" id="ep-cuepa-work" aria-labelledby="ep-cuepa-work-t">
+ <div class="ep-in">
+  <div class="ep-ph"><img src="/img/cuepa-work.webp" alt="" decoding="async"><button class="ep-x" type="button" aria-label="Close">×</button></div>
+  <div class="ep-body">
+   <div class="ep-tags"><span class="tag ep-st">Live</span><span class="tag">Small-business workflows</span></div>
+   <h2 id="ep-cuepa-work-t">Cuepa for Work</h2>
+   <p class="ep-tag">Make the work easier to follow.</p>
+   <div class="ep-sec"><h3>The problem</h3><p>Busywork eats the day. Knowledge workers can spend 50&ndash;60% of their time coordinating work instead of doing it.</p></div>
+   <div class="ep-sec"><h3>Who it&rsquo;s for</h3><p>Small-business owners, managers and their teams.</p></div>
+   <div class="ep-sec"><h3>What you get</h3><ul><li>The repetitive work taken off your plate</li><li>More room for bigger things</li><li>You keep the decisions</li></ul></div>
+   <div class="ep-sec"><h3>The name</h3><p>From Nahuatl, &ldquo;to turn&rdquo; or &ldquo;to return.&rdquo; Turning time back to the work that matters.</p></div>
+   <a class="btn btn-primary ep-go" href="https://www.makingcuepa.com/" target="_blank" rel="noopener">Visit makingcuepa.com <span class="arr" aria-hidden="true">→</span></a>
+  </div>
+ </div>
+</dialog>
+<dialog class="ep-dlg" id="ep-cuepa-you" aria-labelledby="ep-cuepa-you-t">
+ <div class="ep-in">
+  <div class="ep-ph"><img src="/img/cuepa-you.webp" alt="" decoding="async"><button class="ep-x" type="button" aria-label="Close">×</button></div>
+  <div class="ep-body">
+   <div class="ep-tags"><span class="tag ep-st">Live</span><span class="tag">Everyday life</span></div>
+   <h2 id="ep-cuepa-you-t">Cuepa for You</h2>
+   <p class="ep-tag">Make everyday life easier to run.</p>
+   <div class="ep-sec"><h3>The problem</h3><p>AI feels like one more thing to keep up with. A new must-have every day, and nobody shows you where to start.</p></div>
+   <div class="ep-sec"><h3>Who it&rsquo;s for</h3><p>Beginners who feel behind on AI, for personal life (not business).</p></div>
+   <div class="ep-sec"><h3>What you get</h3><ul><li>One-on-one help, just you and us, start to finish</li><li>Join from your couch or kitchen table</li><li>No experience needed. Come as you are</li><li>Your own AI command center to keep after the call</li></ul></div>
+   <div class="ep-sec"><h3>The name</h3><p>From Nahuatl, &ldquo;to turn&rdquo; or &ldquo;to return.&rdquo; Turning time back to the parts of life that matter.</p></div>
+   <a class="btn btn-primary ep-go" href="https://you.makingcuepa.com/" target="_blank" rel="noopener">Visit you.makingcuepa.com <span class="arr" aria-hidden="true">→</span></a>
+  </div>
+ </div>
+</dialog>
+<dialog class="ep-dlg" id="ep-ollin-os" aria-labelledby="ep-ollin-os-t">
+ <div class="ep-in">
+  <div class="ep-ph"><img src="/img/ollin-os.webp" alt="" decoding="async"><button class="ep-x" type="button" aria-label="Close">×</button></div>
+  <div class="ep-body">
+   <div class="ep-tags"><span class="tag ep-st">Live</span><span class="tag">Staffing sales intelligence</span></div>
+   <h2 id="ep-ollin-os-t">&#332;LLIN OS</h2>
+   <p class="ep-tag">We find the signal. You build the relationship.</p>
+   <div class="ep-sec"><h3>The problem</h3><p>73% of B2B buyers avoid suppliers that send irrelevant outreach. Sellers need a real reason to reach out.</p></div>
+   <div class="ep-sec"><h3>Who it&rsquo;s for</h3><p>Staffing salespeople.</p></div>
+   <div class="ep-sec"><h3>What you get</h3><ul><li>Relevant signals, with a clear next move</li><li>Context on the account and the people</li><li>Evidence you can check yourself</li></ul></div>
+   <div class="ep-sec"><h3>The name</h3><p>From Nahuatl, &ldquo;movement.&rdquo; Keeping your sales moving.</p></div>
+   <a class="btn btn-primary ep-go" href="https://www.ollinos.com/" target="_blank" rel="noopener">Visit ollinos.com <span class="arr" aria-hidden="true">→</span></a>
+  </div>
+ </div>
+</dialog>
+<script>
+  // Brand stories: the tapped tile grows into its story panel (motion.dev style).
+  // Only opens and closes panels. No data, no app logic. Without JavaScript, tiles link to each site.
+  (function () {
+    var calm = matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var ease = 'cubic-bezier(.2,.7,.2,1)', current = null;
+    function morph(dlg, card, opening) {
+      var a = card.getBoundingClientRect(), b = dlg.getBoundingClientRect();
+      var from = 'translate(' + (a.left - b.left) + 'px,' + (a.top - b.top) + 'px) scale(' + (a.width / b.width) + ',' + (a.height / b.height) + ')';
+      var k = opening ? [{ transform: from }, { transform: 'none' }] : [{ transform: 'none' }, { transform: from }];
+      var inner = dlg.querySelector('.ep-in');
+      inner.animate(opening ? [{ opacity: 0 }, { opacity: 1 }] : [{ opacity: 1 }, { opacity: 0 }], { duration: opening ? 260 : 140, delay: opening ? 140 : 0, easing: 'ease', fill: 'both' });
+      return dlg.animate(k, { duration: opening ? 460 : 340, easing: ease, fill: 'both' });
+    }
+    function open(card) {
+      var dlg = document.getElementById(card.getAttribute('data-story'));
+      if (!dlg || typeof dlg.showModal !== 'function') return false;
+      dlg.showModal(); current = { dlg: dlg, card: card };
+      if (!calm && dlg.animate) { card.classList.add('ep-hide'); morph(dlg, card, true); }
+      return true;
+    }
+    function close() {
+      if (!current) return; var c = current; current = null;
+      function done() { c.dlg.getAnimations().forEach(function (x) { x.cancel(); }); c.dlg.querySelector('.ep-in').getAnimations().forEach(function (x) { x.cancel(); }); c.dlg.close(); c.card.classList.remove('ep-hide'); c.card.focus({ preventScroll: true }); }
+      if (calm || !c.dlg.animate) return done();
+      c.dlg.querySelector('.ep-in').scrollTop = 0;
+      morph(c.dlg, c.card, false).onfinish = done;
+    }
+    document.querySelectorAll('.brand[data-story]').forEach(function (card) {
+      card.addEventListener('click', function (e) { if (e.metaKey || e.ctrlKey || e.shiftKey) return; if (open(card)) e.preventDefault(); });
+    });
+    document.querySelectorAll('.ep-dlg').forEach(function (dlg) {
+      dlg.querySelector('.ep-x').addEventListener('click', close);
+      dlg.addEventListener('click', function (e) { if (e.target === dlg) close(); });
+      dlg.addEventListener('cancel', function (e) { e.preventDefault(); close(); });
+    });
   })();
 </script>
 </body>
