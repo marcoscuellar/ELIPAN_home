@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ELIPAN Group · AI, built around human life</title>
+<meta name="description" content="ELIPAN Group is a Chicago company building AI products with people at the center: NENEMI, Cuepa and ŌLLIN OS. Founded by Marcos Cuellar.">
+<link rel="canonical" href="https://www.elipangroup.com/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="ELIPAN Group">
+<meta property="og:title" content="ELIPAN Group · AI, built around human life">
+<meta property="og:description" content="ELIPAN Group is a Chicago company building AI products with people at the center: NENEMI, Cuepa and ŌLLIN OS. Founded by Marcos Cuellar.">
+<meta property="og:url" content="https://www.elipangroup.com/">
+<meta property="og:image" content="https://www.elipangroup.com/img/og-elipan.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="A busy downtown Chicago street at golden hour">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="ELIPAN Group · AI, built around human life">
+<meta name="twitter:description" content="ELIPAN Group is a Chicago company building AI products with people at the center: NENEMI, Cuepa and ŌLLIN OS. Founded by Marcos Cuellar.">
+<meta name="twitter:image" content="https://www.elipangroup.com/img/og-elipan.jpg">
+<meta name="theme-color" content="#FFFFFF">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20viewBox=%270%200%20200%20200%27%3E%3Crect%20width=%27200%27%20height=%27200%27%20rx=%2744%27%20fill=%27%230A0A0A%27/%3E%3Cpolygon%20fill=%27none%27%20stroke=%27white%27%20stroke-width=%2718%27%20points=%27100,26%20164,63%20164,137%20100,174%2036,137%2036,63%27/%3E%3Cpolygon%20fill=%27%238FAE8B%27%20points=%27100,10%20177.9,55%20177.9,145%20100,190%2022.1,145%2022.1,55%27%20transform=%27translate(100%20100)%20scale(0.32)%20translate(-100%20-100)%27/%3E%3C/svg%3E">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"ELIPAN Group","url":"https://www.elipangroup.com/","slogan":"Intelligent design to enhance human life.","email":"marcoscuellar@elipangroup.com","description":"ELIPAN Group is a Chicago company building AI products with people at the center: NENEMI, Cuepa and ŌLLIN OS. Founded by Marcos Cuellar.","logo":"https://www.elipangroup.com/img/og-elipan.jpg","founder":{"@type":"Person","name":"Marcos Cuellar","jobTitle":"Founder"},"address":{"@type":"PostalAddress","addressLocality":"Chicago","addressRegion":"IL","addressCountry":"US"},"brand":[{"@type":"Brand","name":"NENEMI","url":"https://www.mynenemi.com/"},{"@type":"Brand","name":"Cuepa for Work","url":"https://www.makingcuepa.com/"},{"@type":"Brand","name":"Cuepa for You","url":"https://you.makingcuepa.com/"},{"@type":"Brand","name":"ŌLLIN OS","url":"https://www.ollinos.com/"}]}</script>
+<script>
+  // Light leads. A visitor's own saved choice wins.
+  try { var t = localStorage.getItem('elipan_theme'); if (t === 'dark' || t === 'light') document.documentElement.setAttribute('data-theme', t); } catch (e) {}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  /* ELIPAN Studio design system tokens */
+  :root {
+    --bg:#FFFFFF; --card:#FFFFFF; --raised:#F5F5F5; --ink:#0A0A0A; --muted:#5E5E5E; --line:#E4E4E4; --divider:#C9C9C9;
+    --sage:#8FAE8B; --sage-ink:#4A6B47; --sage-tint:#EEF3ED; --on-sage:#0A0A0A; --focus:#4A6B47;
+    --night:#0A0A0A; --on-night:#FFFFFF; --error:#C62828;
+    --shadow-card:0 1px 2px rgba(10,10,10,.06), 0 12px 30px rgba(10,10,10,.07);
+    --shadow-lift:0 2px 4px rgba(10,10,10,.08), 0 20px 44px rgba(10,10,10,.12), 0 10px 36px rgba(143,174,139,.18);
+    --r-md:10px; --r-lg:18px; --r-xl:40px; --r-pill:999px;
+    --font-display:'Archivo','Inter',system-ui,sans-serif; --font-body:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif; --font-mono:'IBM Plex Mono',ui-monospace,Menlo,monospace;
+    --ease:cubic-bezier(.2,.7,.2,1);
+    color-scheme: light;
+  }
+  :root[data-theme="dark"] {
+    --bg:#000000; --card:#0B0B0B; --raised:#121212; --ink:#FFFFFF; --muted:#A0A0A0; --line:#222222; --divider:#3A3A3A;
+    --sage:#A9C4A5; --sage-ink:#B9D1B5; --sage-tint:#16201A; --focus:#A9C4A5; --night:#0B0B0B; --error:#E5484D;
+    --shadow-card:inset 0 1px 0 rgba(255,255,255,.06), 0 1px 2px rgba(0,0,0,.8), 0 14px 36px rgba(0,0,0,.7);
+    --shadow-lift:inset 0 1px 0 rgba(255,255,255,.08), 0 2px 4px rgba(0,0,0,.8), 0 22px 50px rgba(0,0,0,.8), 0 10px 40px rgba(169,196,165,.16);
+    color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  [hidden] { display: none !important; }
+  html { scroll-behavior: smooth; scroll-padding-top: 88px; }
+  html, body { margin: 0; }
+  body { background: var(--bg); color: var(--ink); font-family: var(--font-body); font-size: 17px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+  h1, h2, h3, p { margin: 0; }
+  h1, h2, h3 { font-family: var(--font-display); }
+  a { color: inherit; }
+  :focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; border-radius: 6px; }
+  /* page side padding: the whole page stays centered with room on both sides */
+  :root { --side: 24px; --gap: 20px; --max: 1392px; --panel-r: 26px; --inset: 16px; }
+  @media (min-width: 1500px) { :root { --side: 64px; } }
+  @media (max-width: 600px) { :root { --side: 12px; --gap: 12px; --panel-r: 20px; --inset: 8px; } }
+  .w { width: min(calc(var(--max) - 2 * var(--inset)), calc(100% - 2 * (var(--side) + var(--inset)))); margin: 0 auto; }
+  .eyebrow { font-family: var(--font-mono); font-size: 12px; line-height: 16px; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); }
+  .skip { position: absolute; left: 16px; top: -60px; z-index: 100; background: var(--ink); color: var(--bg); padding: 12px 18px; border-radius: var(--r-md); font-weight: 700; text-decoration: none; }
+  .skip:focus { top: 16px; }
+
+  /* nav */
+  header.nav { position: sticky; top: 0; z-index: 30; background: color-mix(in srgb, var(--bg) 92%, transparent); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); transition: box-shadow .3s ease; }
+  header.nav.solid { box-shadow: 0 1px 0 var(--line); }
+  .nav-in { display: flex; align-items: center; justify-content: space-between; gap: 16px; height: 72px; }
+  .logo { display: inline-flex; align-items: center; gap: 12px; text-decoration: none; color: var(--ink); min-height: 44px; }
+  .logo svg { width: 30px; height: 30px; }
+  .wm-n { font-size: 20px; letter-spacing: .08em; }
+  .wm-n b { font-weight: 700; }
+  .wm-sep { width: 1px; height: 20px; background: var(--divider); }
+  .wm-g { font-size: 12px; font-weight: 500; letter-spacing: .42em; opacity: .72; }
+  .links { display: flex; align-items: center; gap: 28px; }
+  .links a.l { display: inline-flex; align-items: center; min-height: 44px; font-family: var(--font-mono); font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); text-decoration: none; }
+  .links a.l:hover, .links a.l[aria-current="true"] { color: var(--ink); }
+  .links a.l[aria-current="true"]::after { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--sage); margin-left: 8px; }
+  @media (max-width: 760px) { .links a.l { display: none; } }
+
+  /* buttons */
+  .btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 48px; padding: 0 26px; border-radius: var(--r-md); font-family: var(--font-body); font-weight: 700; font-size: 16px; line-height: 1; text-decoration: none; cursor: pointer; border: 1px solid transparent; transition: background-color 150ms ease, color 150ms ease, border-color 150ms ease, transform 150ms ease; }
+  .btn:active { transform: scale(.97); }
+  .btn-primary { background: var(--sage); color: var(--on-sage); }
+  .btn-primary:hover { background: var(--ink); color: var(--bg); }
+  .btn-quiet { background: transparent; color: var(--ink); border-color: var(--line); }
+  .btn-quiet:hover { border-color: var(--ink); }
+  .btn-sm { min-height: 44px; padding: 0 18px; font-size: 15px; white-space: nowrap; }
+  .btn .arr { display: inline-block; transition: transform 200ms ease; }
+  .btn:hover .arr { transform: translateX(3px); }
+  .btn:hover .arr.down { transform: translateY(2px); }
+
+  /* hero */
+  .hero { text-align: center; }
+  .hero h1 { margin-top: 20px; font-size: clamp(48px, 8.4vw, 112px); line-height: .98; letter-spacing: -.05em; font-weight: 800; text-wrap: balance; }
+  .hero .lead { margin: 28px auto 0; font-size: clamp(18px, 1.9vw, 22px); line-height: 1.5; color: var(--muted); max-width: 620px; text-wrap: balance; }
+  .hero .btns { margin-top: 44px; display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+  .hero-mark { width: 96px; height: 96px; margin: 0 auto 36px; color: var(--ink); display: block; }
+
+  /* sections */
+  /* every section is its own big rounded panel, inset from the screen edge (padding on the sides) */
+  main { display: grid; gap: var(--gap); width: 100%; max-width: calc(var(--max) + 2 * var(--side)); margin: 0 auto; padding: 24px var(--side) var(--gap); }
+  .frame { margin: 0; border-radius: var(--panel-r); background: var(--card); box-shadow: var(--shadow-card); padding: clamp(64px, 8vw, 112px) 0; }
+  .frame .w { width: calc(100% - 2 * clamp(26px, 4.4vw, 64px)); }
+  
+  .head { max-width: 760px; margin-bottom: 56px; }
+  .head h2 { margin-top: 16px; font-size: clamp(34px, 4.4vw, 56px); line-height: 1.04; letter-spacing: -.04em; font-weight: 800; text-wrap: balance; }
+  .head p { margin-top: 16px; color: var(--muted); font-size: 18px; max-width: 560px; }
+
+  /* section headers, same system as ollinos.com: unboxed, a 2px rule with number and label, big headline left, intro right */
+  .section { padding: 76px 16px 12px; }
+  .section-heading { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); column-gap: 56px; align-items: end; margin-bottom: 56px; }
+  .sec-rule { grid-column: 1 / -1; position: relative; display: flex; justify-content: space-between; gap: 16px; padding-top: 16px; font: 500 12px/1.4 var(--font-mono); letter-spacing: .14em; text-transform: uppercase; color: var(--ink); }
+  .sec-rule::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 2px; background: var(--ink); }
+  .section-heading h2 { margin: 40px 0 0; font-size: clamp(38px, 4.4vw, 60px); font-weight: 600; line-height: 1.02; letter-spacing: -.045em; text-wrap: balance; }
+  .section-heading p { max-width: 420px; font-size: 17px; line-height: 1.55; color: var(--muted); padding-bottom: 8px; }
+  .section .brands { gap: 20px; }
+  .section .row { margin: 0; }
+  @media (max-width: 850px) { .section-heading { grid-template-columns: 1fr; } .section-heading p { margin-top: 24px; } }
+  @media (max-width: 600px) { .section { padding: 52px 8px 0; } .section .brands { gap: 12px; } .section-heading { margin-bottom: 36px; } .section-heading h2 { font-size: clamp(34px, 9.5vw, 40px); margin-top: 28px; } .section-heading p { font-size: 16px; } }
+  /* founder (matches ollinos.com) */
+  .founder { display: grid; grid-template-columns: 1fr 1fr; margin: 28px 16px 0; border-radius: var(--panel-r); background: var(--card); box-shadow: var(--shadow-card); overflow: hidden; }
+  .founder-image { min-height: 560px; position: relative; background: linear-gradient(160deg, #2a2f2a, #0A0A0A); }
+  .founder-image img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 53% center; }
+  .founder-copy { padding: 56px; align-self: center; display: flex; flex-direction: column; gap: 18px; }
+  .founder-copy h2 { font-size: clamp(30px, 3vw, 42px); font-weight: 600; line-height: 1.04; letter-spacing: -.045em; margin-top: 6px; }
+  .founder-copy blockquote { margin: 0; font-size: 19px; line-height: 1.6; color: var(--ink); font-weight: 500; }
+  .founder-copy p { font-size: 16px; line-height: 1.7; color: var(--muted); }
+  .creds { list-style: none; margin: 4px 0 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .creds li { display: grid; gap: 4px; padding-top: 12px; border-top: 1px solid var(--line); font-size: 13px; line-height: 1.45; color: var(--muted); }
+  .creds b { color: var(--ink); font-size: 14px; }
+  .founder-signature { display: flex; flex-direction: column; gap: 4px; margin-top: 10px; }
+  .founder-signature > span:first-child { font-weight: 600; font-size: 18px; }
+  @media (max-width: 850px) { .founder-copy { padding: 36px; } .creds { grid-template-columns: 1fr; } }
+  @media (max-width: 700px) { .founder { grid-template-columns: 1fr; margin: 20px 8px 0; } .founder-image { min-height: 390px; } .founder-image img { object-position: center 30%; } .founder-copy { padding: 32px 26px; } }
+  /* brand cards: shadow only, never an outline */
+  .brands { display: grid; grid-template-columns: repeat(6, 1fr); gap: clamp(24px, 2.4vw, 32px); }
+  .brands > .brand { grid-column: span 3; }
+  @media (max-width: 1000px) { .brands { grid-template-columns: 1fr 1fr; } .brands > .brand, .brands > .brand:nth-child(n+4) { grid-column: auto; } }
+  @media (max-width: 640px) { .brands { grid-template-columns: 1fr; } }
+  .brand { display: flex; flex-direction: column; text-decoration: none; color: var(--ink); background: var(--card); border-radius: var(--panel-r); overflow: hidden; box-shadow: var(--shadow-card); transition: translate 250ms var(--ease), box-shadow 250ms ease; }
+  .brand:hover { translate: 0 -3px; box-shadow: var(--shadow-lift); }
+  .brand:focus-visible { outline-offset: 4px; border-radius: var(--r-lg); }
+  .photo { aspect-ratio: 16 / 9; margin: 14px 14px 0; border-radius: 12px; overflow: hidden; background: var(--raised); display: grid; place-items: center; color: var(--muted); font-family: var(--font-mono); font-size: 11px; letter-spacing: .14em; text-transform: uppercase; }
+  .photo img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 600ms var(--ease); }
+  .brand:hover .photo img { transform: scale(1.03); }
+  .brand-body { padding: 26px 28px 30px; display: flex; flex-direction: column; gap: 10px; flex: 1; }
+  .tag { align-self: flex-start; display: inline-flex; align-items: center; height: 28px; padding: 0 12px; border-radius: var(--r-pill); background: var(--sage-tint); color: var(--sage-ink); font-family: var(--font-mono); font-size: 12px; letter-spacing: .04em; }
+  .brand h3 { font-size: 28px; letter-spacing: -.02em; font-weight: 800; line-height: 1.15; margin-top: 4px; }
+  .brand p { color: var(--muted); font-size: 18px; }
+  .brand .go { margin-top: auto; padding-top: 16px; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--line); font-weight: 600; font-size: 15px; }
+  .brand .dom { font-family: var(--font-mono); font-size: 12px; color: var(--muted); letter-spacing: .04em; }
+  .brand .go .arr { display: inline-block; transition: transform 200ms ease; }
+  .brand:hover .go .arr { transform: translateX(3px); }
+  .more { margin-top: 28px; color: var(--muted); font-size: 15px; }
+
+  /* contact form */
+  form { display: grid; gap: 18px; }
+  .field { display: grid; gap: 8px; }
+  .field label { font-weight: 600; font-size: 15px; }
+  .field input, .field textarea { font: inherit; font-size: 17px; color: var(--ink); background: var(--raised); border: 1px solid transparent; border-radius: var(--r-md); padding: 13px 14px; min-height: 48px; }
+  .field textarea { min-height: 140px; resize: vertical; }
+  .field input:focus-visible, .field textarea:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; background: var(--card); }
+  .field input[aria-invalid="true"], .field textarea[aria-invalid="true"] { border-color: var(--error); }
+  .hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+  .form-msg { font-size: 15px; min-height: 24px; }
+  .form-msg.err { color: var(--error); }
+  .done { display: none; }
+  .done h3 { font-size: 28px; font-weight: 800; letter-spacing: -.02em; }
+  .done p { margin-top: 10px; color: var(--muted); }
+  .sent form { display: none; }
+  .sent .done { display: block; }
+
+  /* footer */
+  footer { padding: 24px 0 40px; }
+  .foot { display: flex; justify-content: space-between; align-items: center; gap: 24px; flex-wrap: wrap; color: var(--muted); font-size: 15px; }
+  .foot a { color: var(--ink); }
+  .mode { font: inherit; font-family: var(--font-mono); font-size: 12px; letter-spacing: .14em; text-transform: uppercase; background: transparent; color: var(--ink); border: 0; border-radius: var(--r-md); min-height: 44px; padding: 0 14px; cursor: pointer; box-shadow: var(--shadow-card); }
+
+  /* rows of 2-3 panels, Oneday style */
+  .row { display: grid; gap: var(--gap); margin: 0; }
+  .r-2 { grid-template-columns: 1fr 1fr; } .r-3 { grid-template-columns: repeat(3, 1fr); } .r-21 { grid-template-columns: 2fr 1fr; } .r-12 { grid-template-columns: 1fr 1.4fr; }
+  @media (max-width: 900px) { .r-2, .r-3, .r-21, .r-12 { grid-template-columns: 1fr; } }
+  .cell { border-radius: var(--panel-r); background: var(--card); box-shadow: var(--shadow-card); padding: clamp(28px, 4vw, 56px); min-width: 0; }
+  @media (max-width: 600px) { .cell { padding: 30px 26px; } }
+  .cell.night { background: var(--night); color: var(--on-night); }
+  .cell.night .eyebrow { color: #B9D1B5; }
+  .cell h2.eyebrow, .cell h3.eyebrow { font-family: var(--font-mono); font-size: 12px; line-height: 16px; font-weight: 500; letter-spacing: .16em; margin: 0; }
+  .cell-h { margin-top: 14px; font-size: clamp(30px, 3.4vw, 44px); line-height: 1.05; letter-spacing: -.04em; font-weight: 800; text-wrap: balance; }
+  .cell-h.big { font-size: clamp(36px, 4.8vw, 64px); }
+  .frame.slim { padding: clamp(48px, 6vw, 80px) 0; }
+  /* big stats */
+  .big-stats { display: grid; gap: 28px; margin-top: 28px; }
+  .bstat { display: grid; grid-template-columns: auto 1fr; align-items: center; gap: 24px; padding-top: 24px; border-top: 1px solid #262626; }
+  .bstat:first-child { border-top: 0; padding-top: 0; }
+  .bstat .v { font-family: var(--font-display); font-weight: 800; font-size: clamp(64px, 7vw, 96px); line-height: .9; letter-spacing: -.05em; min-width: 1.1em; color: #FFFFFF; }
+  .bstat p { color: #CFCFCF; font-size: 17px; } .bstat b { color: #FFFFFF; }
+  /* photo + quote panel */
+  .quote-cell { position: relative; overflow: hidden; padding: 0; min-height: 500px; display: flex; align-items: flex-end; background: #0A0A0A; color: #FFFFFF; }
+  .quote-cell .qc-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 40%; }
+  .quote-cell .qc-shade { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,0) 35%, rgba(0,0,0,.55) 62%, rgba(0,0,0,.9) 100%); }
+  .quote-cell .qc { position: relative; margin: 0; padding: clamp(32px, 4.6vw, 56px); }
+  .quote-cell .eyebrow { color: #B9D1B5; }
+  .quote-cell blockquote { margin: 14px 0 0; }
+  .quote-cell blockquote p { font-family: var(--font-display); font-weight: 800; font-size: clamp(22px, 2.2vw, 30px); line-height: 1.15; letter-spacing: -.03em; text-wrap: balance; }
+  .quote-cell figcaption { margin-top: 18px; font-family: var(--font-mono); font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: #CFCFCF; }
+  @media (max-width: 560px) { .quote-cell { min-height: 460px; } }
+  html.m .quote-cell[data-float] > .qc-img, html.m .quote-cell[data-float] > .qc-shade { opacity: 1; animation: none; }
+  /* CHIMAL pipeline */
+  .pipe { margin-top: 36px; position: relative; --dur: 6s; }
+  .pipe-track { position: absolute; left: 22px; right: 22px; top: 21px; height: 2px; background: var(--line); border-radius: 2px; }
+  .pipe-dot { position: absolute; top: -5px; left: 0; width: 12px; height: 12px; border-radius: 50%; background: var(--sage); box-shadow: 0 0 0 6px rgba(143,174,139,.25); animation: travel var(--dur) cubic-bezier(.6,0,.4,1) infinite; }
+  @keyframes travel { 0% { left: 0; opacity: 0; } 6% { opacity: 1; } 88% { left: calc(100% - 12px); opacity: 1; } 100% { left: calc(100% - 12px); opacity: 0; } }
+  .pipe-steps { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; position: relative; }
+  .pipe-steps li { display: grid; justify-items: start; gap: 6px; font-size: 15px; }
+  .pipe-steps small { color: var(--muted); font-size: 13px; line-height: 1.35; }
+  .node { width: 44px; height: 44px; border-radius: 50%; display: grid; place-items: center; background: var(--card); box-shadow: var(--shadow-card); font-family: var(--font-mono); font-size: 13px; animation: light var(--dur) ease infinite; animation-delay: calc(var(--i) * 1.5s); }
+  @keyframes light { 0%, 4% { background: var(--card); color: var(--ink); } 10%, 30% { background: var(--sage); color: var(--on-sage); } 40%, 100% { background: var(--card); color: var(--ink); } }
+  @media (max-width: 560px) { .pipe-steps { grid-template-columns: 1fr 1fr; row-gap: 22px; } .pipe-track { display: none; } }
+  /* tiles */
+  .tile { display: flex; flex-direction: column; gap: 12px; min-height: 360px; transition: translate 250ms var(--ease), box-shadow 250ms ease; }
+  .tile:hover { translate: 0 -4px; box-shadow: var(--shadow-lift); }
+  .tile-n { font-family: var(--font-mono); font-size: 12px; letter-spacing: .14em; color: var(--muted); }
+  .tile.night .tile-n { color: #B9D1B5; }
+  .tile h3 { font-size: 26px; font-weight: 800; letter-spacing: -.02em; line-height: 1.15; }
+  .tile p { color: var(--muted); font-size: 16px; } .tile.night p { color: #CFCFCF; }
+  .bars { margin-top: auto; height: 96px; display: flex; align-items: flex-end; gap: 8px; }
+  .bars i { flex: 1; height: var(--h); background: var(--sage-tint); border-radius: 8px 8px 4px 4px; transform-origin: bottom; }
+  .bars i:last-child { background: var(--sage); }
+  .in .bars i, .bars.in i { animation: grow .9s cubic-bezier(.2,.7,.2,1) both; }
+  .bars i:nth-child(2) { animation-delay: .08s; } .bars i:nth-child(3) { animation-delay: .16s; } .bars i:nth-child(4) { animation-delay: .24s; } .bars i:nth-child(5) { animation-delay: .32s; } .bars i:nth-child(6) { animation-delay: .4s; }
+  @keyframes grow { from { transform: scaleY(0); } to { transform: scaleY(1); } }
+  .orbit { margin-top: auto; position: relative; height: 110px; }
+  .orbit span { position: absolute; left: 50%; top: 50%; border-radius: 50%; border: 1px solid #2E2E2E; translate: -50% -50%; }
+  .orbit span:nth-child(1) { width: 104px; height: 104px; } .orbit span:nth-child(2) { width: 68px; height: 68px; } .orbit span:nth-child(3) { width: 14px; height: 14px; background: var(--sage); border: 0; }
+  .orbit span:nth-child(1)::after, .orbit span:nth-child(2)::after { content: ""; position: absolute; width: 8px; height: 8px; border-radius: 50%; background: #FFFFFF; top: -4px; left: calc(50% - 4px); transform-origin: 4px calc(50% + 4px); }
+  .orbit span:nth-child(1)::after { transform-origin: 4px 56px; animation: spin 9s linear infinite; }
+  .orbit span:nth-child(2)::after { transform-origin: 4px 38px; animation: spin 6s linear infinite reverse; background: #B9D1B5; }
+  @keyframes spin { to { rotate: 360deg; } }
+  .ring-wrap { margin-top: auto; position: relative; width: 120px; height: 120px; }
+  .ring-svg { width: 120px; height: 120px; rotate: -90deg; }
+  .ring-bg { fill: none; stroke: var(--sage-tint); stroke-width: 10; }
+  .ring-fg { fill: none; stroke: var(--sage); stroke-width: 10; stroke-linecap: round; stroke-dasharray: 314.2; stroke-dashoffset: 0; }
+  html.m .ring-fg { stroke-dashoffset: 314.2; }
+  html.m .in .ring-fg { animation: fill 1.4s cubic-bezier(.2,.7,.2,1) .3s both; }
+  @keyframes fill { from { stroke-dashoffset: 314.2; } to { stroke-dashoffset: 0; } }
+  .ring-t { position: absolute; inset: 0; display: grid; place-content: center; text-align: center; font-size: 12px; color: var(--muted); font-family: var(--font-mono); letter-spacing: .1em; }
+  .ring-t b { font-family: var(--font-display); font-size: 28px; color: var(--ink); letter-spacing: -.03em; }
+  /* roots + tribute */
+  .cell-h.big + .lead, .cell .lead { margin-top: 20px; font-size: 18px; color: #CFCFCF; max-width: 560px; }
+  .names { display: flex; flex-wrap: wrap; gap: 10px 26px; margin: 48px 0 0; font-family: var(--font-mono); font-size: 13px; letter-spacing: .14em; color: #B9D1B5; list-style: none; padding: 0; }
+  .tribute-cell { display: flex; flex-direction: column; gap: 14px; justify-content: center; }
+  .hero-mark.small { width: 72px; height: 72px; margin: 0 0 12px; }
+  .trib { font-size: 19px; line-height: 1.55; }
+  .names li { opacity: .35; animation: glow 4.8s ease-in-out infinite; }
+  .names li:nth-child(2) { animation-delay: .6s; } .names li:nth-child(3) { animation-delay: 1.2s; } .names li:nth-child(4) { animation-delay: 1.8s; } .names li:nth-child(5) { animation: none; opacity: 1; color: #A0A0A0; }
+  @keyframes glow { 0%, 100% { opacity: .35; } 25% { opacity: 1; } }
+  /* steps */
+  .steps { list-style: none; margin: 32px 0 0; padding: 0; display: grid; gap: 18px; }
+  .steps li { display: flex; align-items: center; gap: 16px; font-size: 19px; }
+  .steps span { width: 40px; height: 40px; border-radius: 50%; display: grid; place-items: center; background: #1C1C1C; color: #B9D1B5; font-family: var(--font-mono); font-size: 13px; flex: none; }
+  #contact form { margin-top: 24px; max-width: 640px; }
+  .contact-sub { margin-top: 12px; color: var(--muted); font-size: 17px; max-width: 560px; }
+  /* pause all motion */
+  html.paused *, html.paused *::before, html.paused *::after { animation-play-state: paused !important; }
+  .mode + .mode { margin-left: 8px; }
+
+  /* float-in */
+  html.m [data-float] > * { opacity: 0; }
+  html.m [data-float].in > * { animation: rise .6s cubic-bezier(.2,.7,.2,1) both; }
+  html.m [data-float].in > *:nth-child(2) { animation-delay: .07s; } html.m [data-float].in > *:nth-child(3) { animation-delay: .14s; } html.m [data-float].in > *:nth-child(4) { animation-delay: .21s; } html.m [data-float].in > *:nth-child(n+5) { animation-delay: .28s; }
+  /* hero: the headline rises line by line from behind a mask */
+  .hero h1 .ln { display: block; overflow: hidden; padding: .04em .12em .12em; margin: 0 -.12em -.12em; }
+  .hero h1 .ln > span { display: block; }
+  html.m [data-float] > h1 { opacity: 1; }
+  html.m .hero h1 .ln > span { transform: translateY(110%); }
+  html.m [data-float].in > h1 { animation: none; }
+  html.m .in h1 .ln > span { animation: lineup .9s cubic-bezier(.2,.7,.2,1) .12s both; }
+  html.m .in h1 .ln + .ln > span { animation-delay: .26s; }
+  @keyframes lineup { from { transform: translateY(110%); } to { transform: none; } }
+  /* the shimmer: rings breathe upward, the sage core glows */
+  .hero-mark .ring { animation: ring 5.6s ease-in-out infinite; }
+  .hero-mark .ring:nth-child(2) { animation-delay: .35s; } .hero-mark .ring:nth-child(3) { animation-delay: .7s; } .hero-mark .ring:nth-child(4) { animation-delay: 1.05s; } .hero-mark .ring:nth-child(5) { animation-delay: 1.4s; }
+  @keyframes ring { 0%, 100% { opacity: .28; } 40% { opacity: 1; } }
+  .hero-mark .core { transform-box: fill-box; transform-origin: center; animation: core 5.6s ease-in-out 1.6s infinite; }
+  @keyframes core { 0%, 100% { opacity: .75; transform: scale(1); } 45% { opacity: 1; transform: scale(1.18); } }
+  @keyframes rise { from { opacity: 0; transform: translateY(28px); } to { opacity: 1; transform: none; } }
+
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition: none !important; animation: none !important; } }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="mark" viewBox="0 0 200 200">
+      <g fill="none" stroke="currentColor">
+        <polygon stroke-width="9" points="100,10 177.9,55 177.9,145 100,190 22.1,145 22.1,55"/>
+        <polygon stroke-width="10.95" points="100,10 177.9,55 177.9,145 100,190 22.1,145 22.1,55" transform="translate(100 92) scale(0.822) translate(-100 -100)"/>
+        <polygon stroke-width="13.98" points="100,10 177.9,55 177.9,145 100,190 22.1,145 22.1,55" transform="translate(100 84) scale(0.644) translate(-100 -100)"/>
+        <polygon stroke-width="19.27" points="100,10 177.9,55 177.9,145 100,190 22.1,145 22.1,55" transform="translate(100 76) scale(0.467) translate(-100 -100)"/>
+        <polygon stroke-width="31.1" points="100,10 177.9,55 177.9,145 100,190 22.1,145 22.1,55" transform="translate(100 68) scale(0.289) translate(-100 -100)"/>
+      </g>
+      <polygon fill="#8FAE8B" points="100,10 177.9,55 177.9,145 100,190 22.1,145 22.1,55" transform="translate(100 62) scale(0.13) translate(-100 -100)"/>
+    </symbol>
+  </defs>
+</svg>
+
+<header class="nav" id="nav">
+  <div class="w nav-in">
+    <a class="logo" href="#top" aria-label="ELIPAN Group home">
+      <svg aria-hidden="true"><use href="#mark"/></svg>
+      <span class="wm-n"><b>ELI</b>PAN</span><span class="wm-sep" aria-hidden="true"></span><span class="wm-g">GROUP</span>
+    </a>
+    <nav class="links" aria-label="Main">
+      <a class="l" href="#brands">Brands</a>
+      <a class="l" href="#philosophy">How we work</a>
+      <a class="l" href="#founder">About</a>
+      <a class="btn btn-primary btn-sm" href="#contact">Get in touch</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <!-- 1. Hero -->
+  <section class="frame" id="top" aria-label="Introduction"><div class="w hero" data-float>
+    <svg class="hero-mark" viewBox="0 0 200 200" role="img" aria-label="ELIPAN mark: five nested hexagons around a sage core"><g fill="none" stroke="currentColor"><polygon class="ring" stroke-width="9" points="100,10 177.9,55 177.9,145 100,190 22.1,145 22.1,55"/><polygon class="ring" stroke-width="10.95" points="100,10 177.9,55 177.9,145 100,190 22.1,145 22.1,55" transform="translate(100 92) scale(0.822) translate(-100 -100)"/><polygon class="ring" stroke-width="13.98" points="100,10 177.9,55 177.9,145 100,190 22.1,145 22.1,55" transform="translate(100 84) scale(0.644) translate(-100 -100)"/><polygon class="ring" stroke-width="19.27" points="100,10 177.9,55 177.9,145 100,190 22.1,145 22.1,55" transform="translate(100 76) scale(0.467) translate(-100 -100)"/><polygon class="ring" stroke-width="31.1" points="100,10 177.9,55 177.9,145 100,190 22.1,145 22.1,55" transform="translate(100 68) scale(0.289) translate(-100 -100)"/></g><g transform="translate(100 62) scale(0.13) translate(-100 -100)"><polygon class="core" fill="#8FAE8B" points="100,10 177.9,55 177.9,145 100,190 22.1,145 22.1,55"/></g></svg>
+    <p class="eyebrow">Intelligent design to enhance human life.</p>
+    <h1><span class="ln"><span>AI, built around</span></span> <span class="ln"><span>human life.</span></span></h1>
+    <p class="lead">ELIPAN Group builds a family of AI products that help people think, work, and move forward, with human judgment at the center.</p>
+    <div class="btns">
+      <a class="btn btn-quiet" href="#brands">Explore our brands <span class="arr down" aria-hidden="true">↓</span></a>
+      <a class="btn btn-primary" href="#contact">Get in touch <span class="arr" aria-hidden="true">→</span></a>
+    </div>
+  </div></section>
+
+  <!-- 2. Proof + CHIMAL: two panels side by side, one black -->
+  <div class="row r-2">
+    <section class="cell quote-cell" aria-labelledby="quote-h" data-float>
+      <img class="qc-img" src="/img/chicago.webp" width="1168" height="784" decoding="async" alt="A busy downtown Chicago street at golden hour, people crossing on wet pavement while a bus and taxi roll by">
+      <div class="qc-shade" aria-hidden="true"></div>
+      <figure class="qc">
+        <p class="eyebrow" id="quote-h">Ollin · movement</p>
+        <blockquote><p>&ldquo;Life keeps moving. The best tools move with you, so every step flows into the next.&rdquo;</p></blockquote>
+        <figcaption>ELIPAN Group · Chicago</figcaption>
+      </figure>
+    </section>
+    <section class="cell" aria-labelledby="chimal-h" data-float>
+      <p class="eyebrow">CHIMAL · our audit</p>
+      <h2 id="chimal-h" class="cell-h">Nothing ships until it survives its own audit.</h2>
+      <div class="pipe" role="img" aria-label="Diagram: every draft moves through four checks in order: Protect, Challenge, Verify, then Human in the Middle, before anything is sent.">
+        <div class="pipe-track"><span class="pipe-dot"></span></div>
+        <ol class="pipe-steps">
+          <li style="--i:0"><span class="node">1</span><b>Protect</b><small>Cites its source</small></li>
+          <li style="--i:1"><span class="node">2</span><b>Challenge</b><small>A second AI tries to break it</small></li>
+          <li style="--i:2"><span class="node">3</span><b>Verify</b><small>Checked line by line</small></li>
+          <li style="--i:3"><span class="node">4</span><b>Human</b><small>A person decides</small></li>
+        </ol>
+      </div>
+    </section>
+  </div>
+
+  <!-- 3. Brands -->
+  <section class="section" id="brands" aria-labelledby="brands-h">
+    <div class="section-heading" data-float>
+      <span class="sec-rule"><span>01</span><span>Our brands</span></span>
+      <h2 id="brands-h">What our brands help you do.</h2>
+      <p>Each brand keeps its own name and audience. All of them share one standard for research, design and judgment.</p>
+    </div>
+      <div class="brands" data-float>
+        <a class="brand" href="https://www.mynenemi.com/">
+          <div class="photo"><img src="/img/nenemi.webp" width="1024" height="576" loading="lazy" decoding="async" alt="A couple laughing while putting groceries away in a bright kitchen, a parent smiling nearby and the dog watching"></div>
+          <div class="brand-body"><span class="tag">ADHD workspace</span><h3>NENEMI</h3><p>Keep your place.</p><div class="go"><span class="dom">mynenemi.com</span><span>Visit <span class="arr" aria-hidden="true">→</span></span></div></div>
+        </a>
+        <a class="brand" href="https://www.makingcuepa.com/">
+          <div class="photo"><img src="/img/cuepa-work.webp" width="1024" height="576" loading="lazy" decoding="async" alt="A small team reviewing a tablet and laptop together at a rooftop table"></div>
+          <div class="brand-body"><span class="tag">Small-business workflows</span><h3>Cuepa for Work</h3><p>Make the work easier to follow.</p><div class="go"><span class="dom">makingcuepa.com</span><span>Visit <span class="arr" aria-hidden="true">→</span></span></div></div>
+        </a>
+        <a class="brand" href="https://you.makingcuepa.com/">
+          <div class="photo"><img src="/img/cuepa-you.webp" width="1024" height="576" loading="lazy" decoding="async" alt="Friends gathered on a backyard patio at dusk as a birthday cake comes out"></div>
+          <div class="brand-body"><span class="tag">Everyday life</span><h3>Cuepa for You</h3><p>Make everyday life easier to run.</p><div class="go"><span class="dom">you.makingcuepa.com</span><span>Visit <span class="arr" aria-hidden="true">→</span></span></div></div>
+        </a>
+        <a class="brand" href="https://www.ollinos.com/">
+          <div class="photo"><img src="/img/ollin-os.webp" width="1024" height="576" loading="lazy" decoding="async" alt="Three professionals talking and laughing over a laptop at a busy rooftop networking event"></div>
+          <div class="brand-body"><span class="tag">Staffing sales intelligence</span><h3>ŌLLIN OS</h3><p>We find the signal. You build the relationship. ŌLLIN GO is built in, and nothing sends without your yes.</p><div class="go"><span class="dom">ollinos.com</span><span>Visit <span class="arr" aria-hidden="true">→</span></span></div></div>
+        </a>
+      </div>
+    <p class="more">More in the works now.</p>
+  </section>
+
+  <!-- 4. How we work: three panels, the middle one black -->
+  <section class="section" id="philosophy" aria-labelledby="philo-h">
+    <div class="section-heading" data-float>
+      <span class="sec-rule"><span>02</span><span>How we work</span></span>
+      <h2 id="philo-h">Intelligence behind the work. People at the center.</h2>
+      <p>Research first. Thoughtful design. A person makes the final call.</p>
+    </div>
+    <div class="row r-3" data-float>
+      <article class="cell tile">
+        <span class="tile-n">01</span>
+        <h3>Research first</h3>
+        <p>Listen to the people living the problem. Change direction when the evidence says so.</p>
+        <div class="bars" aria-hidden="true"><i style="--h:38%"></i><i style="--h:62%"></i><i style="--h:48%"></i><i style="--h:80%"></i><i style="--h:70%"></i><i style="--h:92%"></i></div>
+      </article>
+      <article class="cell tile night">
+        <span class="tile-n">02</span>
+        <h3>Thoughtful design</h3>
+        <p>Every feature earns its place. Who does it help, and who might it leave out?</p>
+        <div class="orbit" aria-hidden="true"><span></span><span></span><span></span></div>
+      </article>
+      <article class="cell tile">
+        <span class="tile-n">03</span>
+        <h3>Human in the Middle</h3>
+        <p>AI drafts and suggests. People review and decide. Nothing is sent until you say so.</p>
+        <div class="ring-wrap"><svg class="ring-svg" viewBox="0 0 120 120" role="img" aria-label="Four of four checks passed"><circle class="ring-bg" cx="60" cy="60" r="50"/><circle class="ring-fg" cx="60" cy="60" r="50"/></svg><span class="ring-t"><b>4/4</b>checks</span></div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Founder: same layout as the founder section on ollinos.com -->
+  <section class="founder" id="founder" aria-labelledby="founder-h">
+    <div class="founder-image"><img src="https://www.ollinos.com/assets/founder.jpg" alt="Marcos Cuellar, founder of ELIPAN Group, seated and smiling" loading="lazy" decoding="async"></div>
+    <div class="founder-copy" data-float>
+      <span class="eyebrow">The person behind ELIPAN</span>
+      <h2 id="founder-h">Work hard. <br>Be kind. <br>Stay curious.</h2>
+      <blockquote>&ldquo;I keep coming back to one question: how can this help someone have a better day?&rdquo;</blockquote>
+      <p>I&rsquo;m Marcos Cuellar. I build products and systems around how people actually think, work, and live. My work starts with paying attention: where people get stuck, what takes too much effort, what could work better.</p>
+      <p>ELIPAN is a tribute to my mother. Her joy, hard work and mission of seeing others thrive is the spirit behind everything we do.</p>
+      <ul class="creds" aria-label="Background">
+        <li><b>Duke University</b><span>Outcomes and purposeful design</span></li>
+        <li><b>Nearly 4 years</b><span>Behind NENEMI</span></li>
+        <li><b>Google</b><span>Certification completed, IBM in progress</span></li>
+      </ul>
+      <div class="founder-signature"><span>Marcos Cuellar</span><span class="eyebrow">Founder, ELIPAN Group</span></div>
+    </div>
+  </section>
+
+  <!-- 6. Contact + what happens next -->
+  <div class="row" id="contact">
+    <section class="cell" aria-labelledby="contact-h" data-float>
+      <h2 id="contact-h" class="cell-h">Contact us</h2>
+      <p class="contact-sub">Send a short note. Marcos reads every message and gets back to you.</p>
+      <div id="form-wrap">
+          <form id="contact-form" novalidate>
+            <div class="field"><label for="f-name">Name</label><input id="f-name" name="name" autocomplete="name" required></div>
+            <div class="field"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" required></div>
+            <div class="field"><label for="f-msg">Message</label><textarea id="f-msg" name="message" required></textarea></div>
+            <div class="hp" aria-hidden="true"><label for="f-company">Company</label><input id="f-company" name="company" tabindex="-1" autocomplete="off"></div>
+            <p class="form-msg" id="form-msg" role="status" aria-live="polite"></p>
+            <div><button class="btn btn-primary" type="submit">Send message <span class="arr" aria-hidden="true">→</span></button></div>
+          </form>
+          <div class="done" tabindex="-1" id="done"><h3>Message sent.</h3><p>Thank you. Marcos will get back to you soon.</p></div>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <div class="w foot">
+    <p>Founded by Marcos Cuellar · Chicago · <a href="mailto:marcoscuellar@elipangroup.com">marcoscuellar@elipangroup.com</a> · © 2026</p>
+    <div><button class="mode" id="pause" type="button" aria-pressed="false">Pause motion</button><button class="mode" id="mode" type="button" aria-pressed="false">Dark mode</button></div>
+  </div>
+</footer>
+
+<script>
+  // nav: add a hairline once you scroll
+  var nav = document.getElementById('nav');
+  addEventListener('scroll', function () { nav.classList.toggle('solid', scrollY > 8); }, { passive: true });
+
+  // show where you are in the nav
+  var navLinks = Array.prototype.slice.call(document.querySelectorAll('.links a.l'));
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (es) {
+      es.forEach(function (e) { if (e.isIntersecting) navLinks.forEach(function (a) { a.setAttribute('aria-current', a.getAttribute('href') === '#' + e.target.id ? 'true' : 'false'); }); });
+    }, { rootMargin: '-45% 0px -50% 0px' });
+    ['brands', 'philosophy', 'founder'].forEach(function (id) { io.observe(document.getElementById(id)); });
+  }
+
+  // light / dark switch (light leads)
+  var mode = document.getElementById('mode');
+  function syncMode() { var d = document.documentElement.getAttribute('data-theme') === 'dark'; mode.textContent = d ? 'Light mode' : 'Dark mode'; mode.setAttribute('aria-pressed', String(d)); }
+  syncMode();
+  mode.addEventListener('click', function () {
+    var next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    try { localStorage.setItem('elipan_theme', next); } catch (e) {}
+    syncMode();
+  });
+
+  // pause / play all looping motion (WCAG 2.2.2)
+  var pz = document.getElementById('pause');
+  pz.addEventListener('click', function () { var on = document.documentElement.classList.toggle('paused'); pz.textContent = on ? 'Play motion' : 'Pause motion'; pz.setAttribute('aria-pressed', String(on)); });
+
+  // contact form: posts to the existing /api/contact
+  var form = document.getElementById('contact-form'), msg = document.getElementById('form-msg');
+  form.addEventListener('submit', function (ev) {
+    ev.preventDefault();
+    var f = form.elements, bad = null;
+    [f.name, f.email, f.message].forEach(function (el) { el.removeAttribute('aria-invalid'); });
+    if (!f.name.value.trim()) bad = [f.name, 'Please add your name.'];
+    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(f.email.value.trim())) bad = [f.email, 'Please add a valid email, like name@example.com.'];
+    else if (!f.message.value.trim()) bad = [f.message, 'Please add a message.'];
+    if (bad) { bad[0].setAttribute('aria-invalid', 'true'); msg.className = 'form-msg err'; msg.textContent = bad[1]; bad[0].focus(); return; }
+    msg.className = 'form-msg'; msg.textContent = 'Sending…';
+    fetch('/api/contact', { method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ name: f.name.value, email: f.email.value, message: f.message.value, company: f.company.value }) })
+      .then(function (r) { return r.json().catch(function () { return {}; }).then(function (j) { return { ok: r.ok, j: j }; }); })
+      .then(function (res) {
+        if (res.ok) { document.getElementById('form-wrap').classList.add('sent'); document.getElementById('done').focus(); }
+        else { msg.className = 'form-msg err'; msg.textContent = (res.j && res.j.error) || 'That didn’t send. Please try again, or email marcoscuellar@elipangroup.com.'; }
+      })
+      .catch(function () { msg.className = 'form-msg err'; msg.textContent = 'That didn’t send. Please try again, or email marcoscuellar@elipangroup.com.'; });
+  });
+</script>
+
+<!-- Float-in: built into the browser, no outside library. Text is never left hidden. -->
+<script>
+  (function () {
+    if (matchMedia('(prefers-reduced-motion: reduce)').matches || !('IntersectionObserver' in window)) return;
+    var groups = document.querySelectorAll('[data-float]');
+    document.documentElement.classList.add('m');
+    var io = new IntersectionObserver(function (es) {
+      es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); countUp(e.target); } });
+    }, { threshold: 0.1 });
+    groups.forEach(function (g) { io.observe(g); });
+    // safety net: whatever happens, everything is visible within 2.5s of being on screen or of load
+    setTimeout(function () { groups.forEach(function (g) { var r = g.getBoundingClientRect(); if (r.top < innerHeight) g.classList.add('in'); }); }, 2500);
+    addEventListener('scroll', function () { clearTimeout(window.__f); window.__f = setTimeout(function () { groups.forEach(function (g) { var r = g.getBoundingClientRect(); if (r.top < innerHeight) g.classList.add('in'); }); }, 900); }, { passive: true });
+    function countUp(root) {
+      root.querySelectorAll('[data-count]').forEach(function (el) {
+        var to = +el.getAttribute('data-count'); if (!to) return;
+        var t0 = performance.now();
+        (function tick(t) { var p = Math.min(1, (t - t0) / 900); el.textContent = Math.round(to * (1 - Math.pow(1 - p, 3))); if (p < 1) requestAnimationFrame(tick); })(t0);
+      });
+    }
+  })();
+</script>
+</body>
+</html>
