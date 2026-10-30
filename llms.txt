@@ -4,9 +4,9 @@
 
 ## Brands
 - [NENEMI](https://www.mynenemi.com/): An ADHD workspace. Step away, come back, and see where you left off.
-- [Cuepa for Work](https://www.makingcuepa.com/): Workflows and applied AI for small businesses.
-- [Cuepa for You](https://you.makingcuepa.com/): One-on-one AI coaching for everyday life.
-- [ŌLLIN OS](https://www.ollinos.com/): Verified account signals for staffing sales. ŌLLIN GO, built in, turns them into outreach a person approves.
+- [CUEPA for Work](https://www.makingcuepa.com/): Workflows and applied AI for small businesses.
+- [CUEPA for You](https://you.makingcuepa.com/): One-on-one AI coaching for everyday life.
+- [ŌLLIN OS/GO](https://www.ollinos.com/): Verified account signals for staffing sales. ŌLLIN GO, built in, turns them into outreach a person approves.
 
 ## How we work
 - CHIMAL, our audit: every draft is checked four ways before it ships (cites its source, a second AI tries to break it, checked line by line, a person decides).
