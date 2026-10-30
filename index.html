@@ -329,6 +329,15 @@
   .steps { list-style: none; margin: 32px 0 0; padding: 0; display: grid; gap: 18px; }
   .steps li { display: flex; align-items: center; gap: 16px; font-size: 19px; }
   .steps span { width: 40px; height: 40px; border-radius: 50%; display: grid; place-items: center; background: #1C1C1C; color: #B9D1B5; font-family: var(--font-mono); font-size: 13px; flex: none; }
+  .contact-cell { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); gap: clamp(32px, 5vw, 72px); }
+  .roots { align-self: center; padding-left: clamp(24px, 4vw, 56px); border-left: 1px solid var(--line); display: flex; flex-direction: column; gap: 14px; }
+  .roots h3 { font-size: clamp(28px, 3vw, 38px); font-weight: 800; letter-spacing: -.03em; line-height: 1.05; }
+  .roots p { color: var(--muted); font-size: 17px; line-height: 1.6; max-width: 460px; }
+  .roots-list { margin: 10px 0 0; display: grid; gap: 0; }
+  .roots-list div { display: flex; justify-content: space-between; gap: 16px; padding: 12px 0; border-top: 1px solid var(--line); }
+  .roots-list dt { font-family: var(--font-mono); font-size: 13px; letter-spacing: .14em; color: var(--ink); }
+  .roots-list dd { margin: 0; color: var(--sage-ink); font-size: 15px; }
+  @media (max-width: 900px) { .contact-cell { grid-template-columns: 1fr; } .roots { padding-left: 0; border-left: 0; border-top: 1px solid var(--line); padding-top: 32px; } }
   #contact form { margin-top: 24px; max-width: 640px; }
   .contact-sub { margin-top: 12px; color: var(--muted); font-size: 17px; max-width: 560px; }
   /* pause all motion */
@@ -524,7 +533,8 @@
 
   <!-- 6. Contact + what happens next -->
   <div class="row" id="contact">
-    <section class="cell" aria-labelledby="contact-h" data-float>
+    <section class="cell contact-cell" aria-labelledby="contact-h" data-float>
+      <div class="contact-main">
       <h2 id="contact-h" class="cell-h">Contact us</h2>
       <p class="contact-sub">Send a short note. Marcos reads every message and gets back to you.</p>
       <div id="form-wrap">
@@ -538,6 +548,19 @@
           </form>
           <div class="done" tabindex="-1" id="done"><h3>Message sent.</h3><p>Thank you. Marcos will get back to you soon.</p></div>
       </div>
+      </div>
+      <aside class="roots" aria-labelledby="roots-h">
+        <p class="eyebrow">Our names · Our roots</p>
+        <h3 id="roots-h">Named in Nahuatl.</h3>
+        <p>Every ELIPAN brand takes its name from Nahuatl, the language of the Mexica (Aztec) people, still spoken across Mexico today.</p>
+        <p>We carry these words with respect for the Nahua and Mexican people: their love of family, their care for community, and their hard work.</p>
+        <dl class="roots-list">
+          <div><dt>NENEMI</dt><dd>to walk</dd></div>
+          <div><dt>CUEPA</dt><dd>to turn, to return</dd></div>
+          <div><dt>&#332;LLIN</dt><dd>movement</dd></div>
+          <div><dt>CHIMAL</dt><dd>shield</dd></div>
+        </dl>
+      </aside>
     </section>
   </div>
 </main>
