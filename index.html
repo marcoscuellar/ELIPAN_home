@@ -285,6 +285,15 @@
   @keyframes fill { from { stroke-dashoffset: 314.2; } to { stroke-dashoffset: 0; } }
   .ring-t { position: absolute; inset: 0; display: grid; place-content: center; text-align: center; font-size: 12px; color: var(--muted); font-family: var(--font-mono); letter-spacing: .1em; }
   .ring-t b { font-family: var(--font-display); font-size: 28px; color: var(--ink); letter-spacing: -.03em; }
+  .tiles5 { display: grid; gap: var(--gap); }
+  .tiles5 .tile { min-height: 320px; }
+  .lock { margin-top: auto; width: 110px; height: 110px; }
+  .facts { margin-top: auto; list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 10px; }
+  .facts li { display: inline-flex; align-items: center; gap: 8px; height: 34px; padding: 0 14px; border-radius: var(--r-pill); font-family: var(--font-mono); font-size: 12px; letter-spacing: .06em; }
+  .facts .ok { background: #16201A; color: #B9D1B5; }
+  .facts .ok::before { content: "\2713"; }
+  .facts .gap { border: 1px dashed #5E5E5E; color: #CFCFCF; }
+  .facts .gap::before { content: "?"; }
   /* roots + tribute */
   .cell-h.big + .lead, .cell .lead { margin-top: 20px; font-size: 18px; color: #CFCFCF; max-width: 560px; }
   .names { display: flex; flex-wrap: wrap; gap: 10px 26px; margin: 48px 0 0; font-family: var(--font-mono); font-size: 13px; letter-spacing: .14em; color: #B9D1B5; list-style: none; padding: 0; }
@@ -435,7 +444,8 @@
       <h2 id="philo-h">Intelligence behind the work. People at the center.</h2>
       <p>We map the real workstreams and workflows people deal with every day. Then every design decision has to pass one test: will this actually make a difference in their lives? If not, it doesn&rsquo;t ship.</p>
     </div>
-    <div class="row r-3" data-float>
+    <div class="tiles5" data-float>
+    <div class="row r-3">
       <article class="cell tile">
         <span class="tile-n">01</span>
         <h3>Research first</h3>
@@ -450,10 +460,25 @@
       </article>
       <article class="cell tile">
         <span class="tile-n">03</span>
+        <h3>Secure by default</h3>
+        <p>Your data is protected and only used for what you asked.</p>
+        <svg class="lock" viewBox="0 0 120 120" aria-hidden="true"><rect x="22" y="52" width="76" height="58" rx="14" fill="var(--sage-tint)"/><path d="M40 52V38a20 20 0 0 1 40 0v14" fill="none" stroke="var(--sage)" stroke-width="10" stroke-linecap="round"/><circle cx="60" cy="78" r="8" fill="var(--sage)"/><rect x="56" y="80" width="8" height="16" rx="4" fill="var(--sage)"/></svg>
+      </article>
+    </div>
+    <div class="row r-2">
+      <article class="cell tile night">
+        <span class="tile-n">04</span>
+        <h3>Honest AI</h3>
+        <p>It checks its own work and would rather leave a gap than make something up.</p>
+        <ul class="facts" aria-hidden="true"><li class="ok">Sourced</li><li class="ok">Checked</li><li class="gap">Unable to verify</li></ul>
+      </article>
+      <article class="cell tile">
+        <span class="tile-n">05</span>
         <h3>People decide</h3>
         <p>AI drafts and suggests. You make the call.</p>
         <div class="ring-wrap"><svg class="ring-svg" viewBox="0 0 120 120" role="img" aria-label="Four of four checks passed"><circle class="ring-bg" cx="60" cy="60" r="50"/><circle class="ring-fg" cx="60" cy="60" r="50"/></svg><span class="ring-t"><b>4/4</b>checks</span></div>
       </article>
+    </div>
     </div>
   </section>
 
