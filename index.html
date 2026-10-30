@@ -127,6 +127,9 @@
   .founder { display: grid; grid-template-columns: 1fr 1fr; margin: 28px 16px 0; border-radius: var(--panel-r); background: var(--card); box-shadow: var(--shadow-card); overflow: hidden; }
   .founder-image { min-height: 560px; position: relative; background: linear-gradient(160deg, #2a2f2a, #0A0A0A); }
   .founder-image img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 53% center; }
+  .founder-cap { position: absolute; left: 0; right: 0; bottom: 0; padding: 80px 32px 28px; background: linear-gradient(180deg, rgba(0,0,0,0), rgba(0,0,0,.72)); color: #FFFFFF; display: flex; flex-direction: column; gap: 6px; }
+  .founder-cap span:first-child { font-family: var(--font-display); font-weight: 700; font-size: 22px; letter-spacing: -.01em; }
+  .founder-cap span:last-child { font-family: var(--font-mono); font-size: 12px; letter-spacing: .16em; text-transform: uppercase; color: #E4E4E4; }
   .founder-copy { padding: 56px; align-self: center; display: flex; flex-direction: column; gap: 18px; }
   .founder-copy h2 { font-size: clamp(30px, 3vw, 42px); font-weight: 600; line-height: 1.04; letter-spacing: -.045em; margin-top: 6px; }
   .founder-copy blockquote { margin: 0; font-size: 19px; line-height: 1.6; color: var(--ink); font-weight: 500; }
@@ -478,7 +481,7 @@
 
   <!-- Founder: same layout as the founder section on ollinos.com -->
   <section class="founder" id="founder" aria-labelledby="founder-h">
-    <div class="founder-image"><img src="https://www.ollinos.com/assets/founder.jpg" alt="Marcos Cuellar, founder of ELIPAN Group, seated and smiling" loading="lazy" decoding="async"></div>
+    <div class="founder-image"><img src="https://www.ollinos.com/assets/founder.jpg" alt="Marcos Cuellar, founder of ELIPAN Group, seated and smiling" loading="lazy" decoding="async"><div class="founder-cap"><span>Marcos Cuellar</span><span>Founder, ELIPAN Group</span></div></div>
     <div class="founder-copy" data-float>
       <span class="eyebrow">The person behind ELIPAN</span>
       <h2 id="founder-h">Work hard. <br>Be kind. <br>Stay curious.</h2>
@@ -490,7 +493,6 @@
         <li><b>Nearly 4 years</b><span>Behind NENEMI</span></li>
         <li><b>Google</b><span>Certification completed, IBM in progress</span></li>
       </ul>
-      <div class="founder-signature"><span>Marcos Cuellar</span><span class="eyebrow">Founder, ELIPAN Group</span></div>
     </div>
   </section>
 
