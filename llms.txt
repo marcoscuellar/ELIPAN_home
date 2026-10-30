@@ -1,6 +1,6 @@
 # ELIPAN Group
 
-> ELIPAN Group is a Chicago company that builds AI products with people at the center. AI drafts and suggests; a person reviews and decides. Founded by Marcos Cuellar.
+> ELIPAN Group builds independent brands that make hard systems simpler. Each brand keeps its own name, look and audience. Underneath, they all share one standard: research first, purposeful design, secure by default, honest AI, and people decide. Founded by Marcos Cuellar in Chicago.
 
 ## Brands
 - [NENEMI](https://www.mynenemi.com/): An ADHD workspace. Step away, come back, and see where you left off.
