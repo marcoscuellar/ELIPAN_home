@@ -158,20 +158,14 @@
   .brand .go .arr { display: inline-block; transition: transform 200ms ease; }
   .brand:hover .go .arr { transform: translateX(3px); }
   /* bento brand grid (motion.dev style): one big tile, two small, one wide */
-  .brands.bento { grid-template-columns: repeat(6, 1fr); grid-template-areas: "o o o o w w" "o o o o y y" "n n n n n n"; }
+  /* brands: four equal tiles, no brand above another */
+  .brands.bento { grid-template-columns: 1fr 1fr; }
   .brands.bento > .brand { grid-column: auto; cursor: pointer; }
-  .brands.bento > .b-n { grid-area: n; } .brands.bento > .b-w { grid-area: w; } .brands.bento > .b-y { grid-area: y; } .brands.bento > .b-o { grid-area: o; }
-  .brands.bento > .b-o .photo { aspect-ratio: auto; flex: 1; min-height: 300px; }
-  .brands.bento > .b-o .brand-body { flex: none; }
-  .brands.bento > .b-o h3 { font-size: clamp(32px, 3.4vw, 44px); }
-  .brands.bento > .b-n { flex-direction: row; }
-  .brands.bento > .b-n .photo { width: 46%; aspect-ratio: 21 / 9; margin: 14px 0 14px 14px; flex: none; }
+  @media (max-width: 640px) { .brands.bento { grid-template-columns: 1fr; } }
   .brand .more-i { display: inline-flex; align-items: center; gap: 6px; }
   .brand .more-i i { font-style: normal; display: inline-grid; place-items: center; width: 24px; height: 24px; border-radius: 50%; background: var(--sage-tint); color: var(--sage-ink); font-size: 16px; line-height: 1; transition: transform 250ms var(--ease); }
   .brand:hover .more-i i { transform: rotate(90deg); }
   .brand.ep-hide { visibility: hidden; }
-  @media (max-width: 1000px) { .brands.bento { grid-template-columns: 1fr 1fr; grid-template-areas: "o o" "w y" "n n"; } }
-  @media (max-width: 640px) { .brands.bento { grid-template-columns: 1fr; grid-template-areas: "o" "w" "y" "n"; } .brands.bento > .b-o .photo { aspect-ratio: 16 / 9; min-height: 0; flex: none; } .brands.bento > .b-o .brand-body { flex: 1; } .brands.bento > .b-n { flex-direction: column; } .brands.bento > .b-n .photo { width: auto; aspect-ratio: 16 / 9; margin: 14px 14px 0; } }
 
   /* story panel: the tapped tile grows into this */
   .ep-dlg { border: 0; padding: 0; width: min(640px, calc(100vw - 24px)); max-width: none; max-height: calc(100dvh - 32px); border-radius: var(--panel-r); background: var(--card); color: var(--ink); box-shadow: var(--shadow-lift); overflow: hidden; transform-origin: 0 0; }
