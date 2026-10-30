@@ -158,20 +158,20 @@
   .brand .go .arr { display: inline-block; transition: transform 200ms ease; }
   .brand:hover .go .arr { transform: translateX(3px); }
   /* bento brand grid (motion.dev style): one big tile, two small, one wide */
-  .brands.bento { grid-template-columns: repeat(6, 1fr); grid-template-areas: "n n n n w w" "n n n n y y" "o o o o o o"; }
+  .brands.bento { grid-template-columns: repeat(6, 1fr); grid-template-areas: "o o o o w w" "o o o o y y" "n n n n n n"; }
   .brands.bento > .brand { grid-column: auto; cursor: pointer; }
   .brands.bento > .b-n { grid-area: n; } .brands.bento > .b-w { grid-area: w; } .brands.bento > .b-y { grid-area: y; } .brands.bento > .b-o { grid-area: o; }
-  .brands.bento > .b-n .photo { aspect-ratio: auto; flex: 1; min-height: 300px; }
-  .brands.bento > .b-n .brand-body { flex: none; }
-  .brands.bento > .b-n h3 { font-size: clamp(32px, 3.4vw, 44px); }
-  .brands.bento > .b-o { flex-direction: row; }
-  .brands.bento > .b-o .photo { width: 46%; aspect-ratio: 16 / 9; margin: 14px 0 14px 14px; flex: none; }
+  .brands.bento > .b-o .photo { aspect-ratio: auto; flex: 1; min-height: 300px; }
+  .brands.bento > .b-o .brand-body { flex: none; }
+  .brands.bento > .b-o h3 { font-size: clamp(32px, 3.4vw, 44px); }
+  .brands.bento > .b-n { flex-direction: row; }
+  .brands.bento > .b-n .photo { width: 46%; aspect-ratio: 21 / 9; margin: 14px 0 14px 14px; flex: none; }
   .brand .more-i { display: inline-flex; align-items: center; gap: 6px; }
   .brand .more-i i { font-style: normal; display: inline-grid; place-items: center; width: 24px; height: 24px; border-radius: 50%; background: var(--sage-tint); color: var(--sage-ink); font-size: 16px; line-height: 1; transition: transform 250ms var(--ease); }
   .brand:hover .more-i i { transform: rotate(90deg); }
   .brand.ep-hide { visibility: hidden; }
-  @media (max-width: 1000px) { .brands.bento { grid-template-columns: 1fr 1fr; grid-template-areas: "n n" "w y" "o o"; } }
-  @media (max-width: 640px) { .brands.bento { grid-template-columns: 1fr; grid-template-areas: "n" "w" "y" "o"; } .brands.bento > .b-n .photo { aspect-ratio: 16 / 9; min-height: 0; flex: none; } .brands.bento > .b-n .brand-body { flex: 1; } .brands.bento > .b-o { flex-direction: column; } .brands.bento > .b-o .photo { width: auto; margin: 14px 14px 0; } }
+  @media (max-width: 1000px) { .brands.bento { grid-template-columns: 1fr 1fr; grid-template-areas: "o o" "w y" "n n"; } }
+  @media (max-width: 640px) { .brands.bento { grid-template-columns: 1fr; grid-template-areas: "o" "w" "y" "n"; } .brands.bento > .b-o .photo { aspect-ratio: 16 / 9; min-height: 0; flex: none; } .brands.bento > .b-o .brand-body { flex: 1; } .brands.bento > .b-n { flex-direction: column; } .brands.bento > .b-n .photo { width: auto; aspect-ratio: 16 / 9; margin: 14px 14px 0; } }
 
   /* story panel: the tapped tile grows into this */
   .ep-dlg { border: 0; padding: 0; width: min(640px, calc(100vw - 24px)); max-width: none; max-height: calc(100dvh - 32px); border-radius: var(--panel-r); background: var(--card); color: var(--ink); box-shadow: var(--shadow-lift); overflow: hidden; transform-origin: 0 0; }
@@ -417,9 +417,9 @@
       <p>Each brand keeps its own name, look and audience. Underneath, they all share one standard.</p>
     </div>
       <div class="brands bento" data-float>
-        <a class="brand b-n" href="https://www.mynenemi.com/" data-story="ep-nenemi" aria-haspopup="dialog">
-          <div class="photo"><img src="/img/nenemi.webp" width="1024" height="576" loading="lazy" decoding="async" alt="A couple laughing while putting groceries away in a bright kitchen, a parent smiling nearby and the dog watching"></div>
-          <div class="brand-body"><span class="tag">ADHD workspace</span><h3>NENEMI</h3><p>Keep your place.</p><div class="go"><span class="dom">mynenemi.com</span><span class="more-i">See the story <i aria-hidden="true">+</i></span></div></div>
+        <a class="brand b-o" href="https://www.ollinos.com/" data-story="ep-ollin-os" aria-haspopup="dialog">
+          <div class="photo"><img src="/img/ollin-os.webp" width="1024" height="576" loading="lazy" decoding="async" alt="Three professionals talking and laughing over a laptop at a busy rooftop networking event"></div>
+          <div class="brand-body"><span class="tag">Staffing sales intelligence</span><h3>ŌLLIN OS/GO</h3><p>We find the signal. You build the relationship. ŌLLIN GO is built in, and nothing sends without your yes.</p><div class="go"><span class="dom">ollinos.com</span><span class="more-i">See the story <i aria-hidden="true">+</i></span></div></div>
         </a>
         <a class="brand b-w" href="https://www.makingcuepa.com/" data-story="ep-cuepa-work" aria-haspopup="dialog">
           <div class="photo"><img src="/img/cuepa-work.webp" width="1024" height="576" loading="lazy" decoding="async" alt="A small team reviewing a tablet and laptop together at a rooftop table"></div>
@@ -429,9 +429,9 @@
           <div class="photo"><img src="/img/cuepa-you.webp" width="1024" height="576" loading="lazy" decoding="async" alt="Friends gathered on a backyard patio at dusk as a birthday cake comes out"></div>
           <div class="brand-body"><span class="tag">Everyday life</span><h3>CUEPA for You</h3><p>Make everyday life easier to run.</p><div class="go"><span class="dom">you.makingcuepa.com</span><span class="more-i">See the story <i aria-hidden="true">+</i></span></div></div>
         </a>
-        <a class="brand b-o" href="https://www.ollinos.com/" data-story="ep-ollin-os" aria-haspopup="dialog">
-          <div class="photo"><img src="/img/ollin-os.webp" width="1024" height="576" loading="lazy" decoding="async" alt="Three professionals talking and laughing over a laptop at a busy rooftop networking event"></div>
-          <div class="brand-body"><span class="tag">Staffing sales intelligence</span><h3>ŌLLIN OS/GO</h3><p>We find the signal. You build the relationship. ŌLLIN GO is built in, and nothing sends without your yes.</p><div class="go"><span class="dom">ollinos.com</span><span class="more-i">See the story <i aria-hidden="true">+</i></span></div></div>
+        <a class="brand b-n" href="https://www.mynenemi.com/" data-story="ep-nenemi" aria-haspopup="dialog">
+          <div class="photo"><img src="/img/nenemi.webp" width="1024" height="576" loading="lazy" decoding="async" alt="A couple laughing while putting groceries away in a bright kitchen, a parent smiling nearby and the dog watching"></div>
+          <div class="brand-body"><span class="tag">ADHD workspace</span><h3>NENEMI</h3><p>Keep your place.</p><div class="go"><span class="dom">mynenemi.com</span><span class="more-i">See the story <i aria-hidden="true">+</i></span></div></div>
         </a>
       </div>
     <p class="more">More in the works now.</p>
