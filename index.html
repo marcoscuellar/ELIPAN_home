@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>ELIPAN Group · AI, built around human life</title>
-<meta name="description" content="ELIPAN Group is a Chicago company building AI products with people at the center: NENEMI, Cuepa and ŌLLIN OS. Founded by Marcos Cuellar.">
+<meta name="description" content="ELIPAN Group builds independent brands that make hard systems simpler: NENEMI, CUEPA for Work, CUEPA for You and ŌLLIN OS/GO. Founded in Chicago.">
 <link rel="canonical" href="https://www.elipangroup.com/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="ELIPAN Group">
 <meta property="og:title" content="ELIPAN Group · AI, built around human life">
-<meta property="og:description" content="ELIPAN Group is a Chicago company building AI products with people at the center: NENEMI, Cuepa and ŌLLIN OS. Founded by Marcos Cuellar.">
+<meta property="og:description" content="ELIPAN Group builds independent brands that make hard systems simpler: NENEMI, CUEPA for Work, CUEPA for You and ŌLLIN OS/GO. Founded in Chicago.">
 <meta property="og:url" content="https://www.elipangroup.com/">
 <meta property="og:image" content="https://www.elipangroup.com/img/og-elipan.jpg">
 <meta property="og:image:width" content="1200">
@@ -17,11 +17,11 @@
 <meta property="og:image:alt" content="A busy downtown Chicago street at golden hour">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="ELIPAN Group · AI, built around human life">
-<meta name="twitter:description" content="ELIPAN Group is a Chicago company building AI products with people at the center: NENEMI, Cuepa and ŌLLIN OS. Founded by Marcos Cuellar.">
+<meta name="twitter:description" content="ELIPAN Group builds independent brands that make hard systems simpler: NENEMI, CUEPA for Work, CUEPA for You and ŌLLIN OS/GO. Founded in Chicago.">
 <meta name="twitter:image" content="https://www.elipangroup.com/img/og-elipan.jpg">
 <meta name="theme-color" content="#FFFFFF">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20viewBox=%270%200%20200%20200%27%3E%3Crect%20width=%27200%27%20height=%27200%27%20rx=%2744%27%20fill=%27%230A0A0A%27/%3E%3Cpolygon%20fill=%27none%27%20stroke=%27white%27%20stroke-width=%2718%27%20points=%27100,26%20164,63%20164,137%20100,174%2036,137%2036,63%27/%3E%3Cpolygon%20fill=%27%238FAE8B%27%20points=%27100,10%20177.9,55%20177.9,145%20100,190%2022.1,145%2022.1,55%27%20transform=%27translate(100%20100)%20scale(0.32)%20translate(-100%20-100)%27/%3E%3C/svg%3E">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"ELIPAN Group","url":"https://www.elipangroup.com/","slogan":"Intelligent design to enhance human life.","email":"marcoscuellar@elipangroup.com","description":"ELIPAN Group is a Chicago company building AI products with people at the center: NENEMI, Cuepa and ŌLLIN OS. Founded by Marcos Cuellar.","logo":"https://www.elipangroup.com/img/og-elipan.jpg","founder":{"@type":"Person","name":"Marcos Cuellar","jobTitle":"Founder"},"address":{"@type":"PostalAddress","addressLocality":"Chicago","addressRegion":"IL","addressCountry":"US"},"brand":[{"@type":"Brand","name":"NENEMI","url":"https://www.mynenemi.com/"},{"@type":"Brand","name":"Cuepa for Work","url":"https://www.makingcuepa.com/"},{"@type":"Brand","name":"Cuepa for You","url":"https://you.makingcuepa.com/"},{"@type":"Brand","name":"ŌLLIN OS","url":"https://www.ollinos.com/"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"ELIPAN Group","url":"https://www.elipangroup.com/","slogan":"Intelligent design to enhance human life.","email":"marcoscuellar@elipangroup.com","description":"ELIPAN Group builds independent brands that make hard systems simpler: NENEMI, CUEPA for Work, CUEPA for You and ŌLLIN OS/GO. Founded in Chicago.","logo":"https://www.elipangroup.com/img/og-elipan.jpg","founder":{"@type":"Person","name":"Marcos Cuellar","jobTitle":"Founder"},"address":{"@type":"PostalAddress","addressLocality":"Chicago","addressRegion":"IL","addressCountry":"US"},"brand":[{"@type":"Brand","name":"NENEMI","url":"https://www.mynenemi.com/"},{"@type":"Brand","name":"CUEPA for Work","url":"https://www.makingcuepa.com/"},{"@type":"Brand","name":"CUEPA for You","url":"https://you.makingcuepa.com/"},{"@type":"Brand","name":"ŌLLIN OS/GO","url":"https://www.ollinos.com/"}]}</script>
 <script>
   // Light leads. A visitor's own saved choice wins.
   try { var t = localStorage.getItem('elipan_theme'); if (t === 'dark' || t === 'light') document.documentElement.setAttribute('data-theme', t); } catch (e) {}
@@ -157,6 +157,34 @@
   .brand .dom { font-family: var(--font-mono); font-size: 12px; color: var(--muted); letter-spacing: .04em; }
   .brand .go .arr { display: inline-block; transition: transform 200ms ease; }
   .brand:hover .go .arr { transform: translateX(3px); }
+  /* bento brand grid (motion.dev style): one big tile, two small, one wide */
+  /* brands: four equal tiles, no brand above another */
+  .brands.bento { grid-template-columns: 1fr 1fr; }
+  .brands.bento > .brand { grid-column: auto; cursor: pointer; }
+  @media (max-width: 640px) { .brands.bento { grid-template-columns: 1fr; } }
+  .brand .more-i { display: inline-flex; align-items: center; gap: 6px; }
+  .brand .more-i i { font-style: normal; display: inline-grid; place-items: center; width: 24px; height: 24px; border-radius: 50%; background: var(--sage-tint); color: var(--sage-ink); font-size: 16px; line-height: 1; transition: transform 250ms var(--ease); }
+  .brand:hover .more-i i { transform: rotate(90deg); }
+  .brand.ep-hide { visibility: hidden; }
+
+  /* story panel: the tapped tile grows into this */
+  .ep-dlg { border: 0; padding: 0; width: min(640px, calc(100vw - 24px)); max-width: none; max-height: calc(100dvh - 32px); border-radius: var(--panel-r); background: var(--card); color: var(--ink); box-shadow: var(--shadow-lift); overflow: hidden; transform-origin: 0 0; }
+  .ep-dlg::backdrop { background: rgba(10,10,10,.5); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); }
+  .ep-in { overflow: auto; max-height: calc(100dvh - 32px); }
+  .ep-ph { position: relative; aspect-ratio: 16 / 9; margin: 14px 14px 0; border-radius: 12px; overflow: hidden; background: var(--raised); }
+  .ep-ph img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .ep-x { position: absolute; top: 12px; right: 12px; appearance: none; width: 44px; height: 44px; border-radius: 50%; border: 0; background: rgba(255,255,255,.92); color: #0A0A0A; font-size: 24px; line-height: 1; cursor: pointer; box-shadow: 0 2px 10px rgba(0,0,0,.18); }
+  .ep-x:hover { background: #FFFFFF; }
+  .ep-body { padding: 24px clamp(22px, 4vw, 36px) clamp(26px, 4vw, 36px); }
+  .ep-tags { display: flex; gap: 8px; flex-wrap: wrap; }
+  .ep-st::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--sage); margin-right: 8px; }
+  .ep-dlg h2 { margin-top: 14px; font-size: clamp(32px, 4.4vw, 44px); font-weight: 800; letter-spacing: -.03em; line-height: 1.04; }
+  .ep-tag { margin-top: 8px; color: var(--muted); font-size: 18px; }
+  .ep-sec { margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--line); }
+  .ep-sec h3 { font-family: var(--font-mono); font-size: 12px; font-weight: 500; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); margin-bottom: 8px; }
+  .ep-sec p, .ep-sec ul { margin: 0; font-size: 16px; line-height: 1.6; color: var(--ink); }
+  .ep-sec ul { padding-left: 20px; } .ep-sec li + li { margin-top: 4px; }
+  .ep-go { margin-top: 26px; width: 100%; }
   .more { margin-top: 28px; color: var(--muted); font-size: 15px; }
 
   /* contact form */
@@ -251,6 +279,15 @@
   @keyframes fill { from { stroke-dashoffset: 314.2; } to { stroke-dashoffset: 0; } }
   .ring-t { position: absolute; inset: 0; display: grid; place-content: center; text-align: center; font-size: 12px; color: var(--muted); font-family: var(--font-mono); letter-spacing: .1em; }
   .ring-t b { font-family: var(--font-display); font-size: 28px; color: var(--ink); letter-spacing: -.03em; }
+  .tiles5 { display: grid; gap: var(--gap); }
+  .tiles5 .tile { min-height: 320px; }
+  .lock { margin-top: auto; width: 110px; height: 110px; }
+  .facts { margin-top: auto; list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 10px; }
+  .facts li { display: inline-flex; align-items: center; gap: 8px; height: 34px; padding: 0 14px; border-radius: var(--r-pill); font-family: var(--font-mono); font-size: 12px; letter-spacing: .06em; }
+  .facts .ok { background: #16201A; color: #B9D1B5; }
+  .facts .ok::before { content: "\2713"; }
+  .facts .gap { border: 1px dashed #5E5E5E; color: #CFCFCF; }
+  .facts .gap::before { content: "?"; }
   /* roots + tribute */
   .cell-h.big + .lead, .cell .lead { margin-top: 20px; font-size: 18px; color: #CFCFCF; max-width: 560px; }
   .names { display: flex; flex-wrap: wrap; gap: 10px 26px; margin: 48px 0 0; font-family: var(--font-mono); font-size: 13px; letter-spacing: .14em; color: #B9D1B5; list-style: none; padding: 0; }
@@ -333,7 +370,7 @@
     <svg class="hero-mark" viewBox="0 0 200 200" role="img" aria-label="ELIPAN mark: five nested hexagons around a sage core"><g fill="none" stroke="currentColor"><polygon class="ring" stroke-width="9" points="100,10 177.9,55 177.9,145 100,190 22.1,145 22.1,55"/><polygon class="ring" stroke-width="10.95" points="100,10 177.9,55 177.9,145 100,190 22.1,145 22.1,55" transform="translate(100 92) scale(0.822) translate(-100 -100)"/><polygon class="ring" stroke-width="13.98" points="100,10 177.9,55 177.9,145 100,190 22.1,145 22.1,55" transform="translate(100 84) scale(0.644) translate(-100 -100)"/><polygon class="ring" stroke-width="19.27" points="100,10 177.9,55 177.9,145 100,190 22.1,145 22.1,55" transform="translate(100 76) scale(0.467) translate(-100 -100)"/><polygon class="ring" stroke-width="31.1" points="100,10 177.9,55 177.9,145 100,190 22.1,145 22.1,55" transform="translate(100 68) scale(0.289) translate(-100 -100)"/></g><g transform="translate(100 62) scale(0.13) translate(-100 -100)"><polygon class="core" fill="#8FAE8B" points="100,10 177.9,55 177.9,145 100,190 22.1,145 22.1,55"/></g></svg>
     <p class="eyebrow">Intelligent design to enhance human life.</p>
     <h1><span class="ln"><span>AI, built around</span></span> <span class="ln"><span>human life.</span></span></h1>
-    <p class="lead">ELIPAN Group builds a family of AI products that help people think, work, and move forward, with human judgment at the center.</p>
+    <p class="lead">ELIPAN Group builds independent brands that make hard systems simpler.</p>
     <div class="btns">
       <a class="btn btn-quiet" href="#brands">Explore our brands <span class="arr down" aria-hidden="true">↓</span></a>
       <a class="btn btn-primary" href="#contact">Get in touch <span class="arr" aria-hidden="true">→</span></a>
@@ -346,14 +383,14 @@
       <img class="qc-img" src="/img/chicago.webp" width="1168" height="784" decoding="async" alt="A busy downtown Chicago street at golden hour, people crossing on wet pavement while a bus and taxi roll by">
       <div class="qc-shade" aria-hidden="true"></div>
       <figure class="qc">
-        <p class="eyebrow" id="quote-h">Ollin · movement</p>
+        <p class="eyebrow" id="quote-h">ŌLLIN · movement</p>
         <blockquote><p>&ldquo;Life keeps moving. The best tools move with you, so every step flows into the next.&rdquo;</p></blockquote>
         <figcaption>ELIPAN Group · Chicago</figcaption>
       </figure>
     </section>
     <section class="cell" aria-labelledby="chimal-h" data-float>
-      <p class="eyebrow">CHIMAL · our audit</p>
-      <h2 id="chimal-h" class="cell-h">Nothing ships until it survives its own audit.</h2>
+      <p class="eyebrow">CHIMAL · Our promise to you</p>
+      <h2 id="chimal-h" class="cell-h">From the get-go, nothing ships until it survives its own audit.</h2>
       <div class="pipe" role="img" aria-label="Diagram: every draft moves through four checks in order: Protect, Challenge, Verify, then Human in the Middle, before anything is sent.">
         <div class="pipe-track"><span class="pipe-dot"></span></div>
         <ol class="pipe-steps">
@@ -371,24 +408,24 @@
     <div class="section-heading" data-float>
       <span class="sec-rule"><span>01</span><span>Our brands</span></span>
       <h2 id="brands-h">What our brands help you do.</h2>
-      <p>Each brand keeps its own name and audience. All of them share one standard for research, design and judgment.</p>
+      <p>Each brand keeps its own name, look and audience. Underneath, they all share one standard.</p>
     </div>
-      <div class="brands" data-float>
-        <a class="brand" href="https://www.mynenemi.com/">
-          <div class="photo"><img src="/img/nenemi.webp" width="1024" height="576" loading="lazy" decoding="async" alt="A couple laughing while putting groceries away in a bright kitchen, a parent smiling nearby and the dog watching"></div>
-          <div class="brand-body"><span class="tag">ADHD workspace</span><h3>NENEMI</h3><p>Keep your place.</p><div class="go"><span class="dom">mynenemi.com</span><span>Visit <span class="arr" aria-hidden="true">→</span></span></div></div>
-        </a>
-        <a class="brand" href="https://www.makingcuepa.com/">
-          <div class="photo"><img src="/img/cuepa-work.webp" width="1024" height="576" loading="lazy" decoding="async" alt="A small team reviewing a tablet and laptop together at a rooftop table"></div>
-          <div class="brand-body"><span class="tag">Small-business workflows</span><h3>Cuepa for Work</h3><p>Make the work easier to follow.</p><div class="go"><span class="dom">makingcuepa.com</span><span>Visit <span class="arr" aria-hidden="true">→</span></span></div></div>
-        </a>
-        <a class="brand" href="https://you.makingcuepa.com/">
-          <div class="photo"><img src="/img/cuepa-you.webp" width="1024" height="576" loading="lazy" decoding="async" alt="Friends gathered on a backyard patio at dusk as a birthday cake comes out"></div>
-          <div class="brand-body"><span class="tag">Everyday life</span><h3>Cuepa for You</h3><p>Make everyday life easier to run.</p><div class="go"><span class="dom">you.makingcuepa.com</span><span>Visit <span class="arr" aria-hidden="true">→</span></span></div></div>
-        </a>
-        <a class="brand" href="https://www.ollinos.com/">
+      <div class="brands bento" data-float>
+        <a class="brand b-o" href="https://www.ollinos.com/" data-story="ep-ollin-os" aria-haspopup="dialog">
           <div class="photo"><img src="/img/ollin-os.webp" width="1024" height="576" loading="lazy" decoding="async" alt="Three professionals talking and laughing over a laptop at a busy rooftop networking event"></div>
-          <div class="brand-body"><span class="tag">Staffing sales intelligence</span><h3>ŌLLIN OS</h3><p>We find the signal. You build the relationship. ŌLLIN GO is built in, and nothing sends without your yes.</p><div class="go"><span class="dom">ollinos.com</span><span>Visit <span class="arr" aria-hidden="true">→</span></span></div></div>
+          <div class="brand-body"><span class="tag">Staffing sales intelligence</span><h3>ŌLLIN OS/GO</h3><p>We find the signal. You build the relationship. ŌLLIN GO is built in, and nothing sends without your yes.</p><div class="go"><span class="dom">ollinos.com</span><span class="more-i">See the story <i aria-hidden="true">+</i></span></div></div>
+        </a>
+        <a class="brand b-w" href="https://www.makingcuepa.com/" data-story="ep-cuepa-work" aria-haspopup="dialog">
+          <div class="photo"><img src="/img/cuepa-work.webp" width="1024" height="576" loading="lazy" decoding="async" alt="A small team reviewing a tablet and laptop together at a rooftop table"></div>
+          <div class="brand-body"><span class="tag">Small-business workflows</span><h3>CUEPA for Work</h3><p>Make the work easier to follow.</p><div class="go"><span class="dom">makingcuepa.com</span><span class="more-i">See the story <i aria-hidden="true">+</i></span></div></div>
+        </a>
+        <a class="brand b-y" href="https://you.makingcuepa.com/" data-story="ep-cuepa-you" aria-haspopup="dialog">
+          <div class="photo"><img src="/img/cuepa-you.webp" width="1024" height="576" loading="lazy" decoding="async" alt="Friends gathered on a backyard patio at dusk as a birthday cake comes out"></div>
+          <div class="brand-body"><span class="tag">Everyday life</span><h3>CUEPA for You</h3><p>Make everyday life easier to run.</p><div class="go"><span class="dom">you.makingcuepa.com</span><span class="more-i">See the story <i aria-hidden="true">+</i></span></div></div>
+        </a>
+        <a class="brand b-n" href="https://www.mynenemi.com/" data-story="ep-nenemi" aria-haspopup="dialog">
+          <div class="photo"><img src="/img/nenemi.webp" width="1024" height="576" loading="lazy" decoding="async" alt="A couple laughing while putting groceries away in a bright kitchen, a parent smiling nearby and the dog watching"></div>
+          <div class="brand-body"><span class="tag">ADHD workspace</span><h3>NENEMI</h3><p>Keep your place.</p><div class="go"><span class="dom">mynenemi.com</span><span class="more-i">See the story <i aria-hidden="true">+</i></span></div></div>
         </a>
       </div>
     <p class="more">More in the works now.</p>
@@ -399,27 +436,43 @@
     <div class="section-heading" data-float>
       <span class="sec-rule"><span>02</span><span>How we work</span></span>
       <h2 id="philo-h">Intelligence behind the work. People at the center.</h2>
-      <p>Research first. Thoughtful design. A person makes the final call.</p>
+      <p>We map the real workstreams and workflows people deal with every day. Then every design decision has to pass one test: will this actually make a difference in their lives? If not, it doesn&rsquo;t ship.</p>
     </div>
-    <div class="row r-3" data-float>
+    <div class="tiles5" data-float>
+    <div class="row r-3">
       <article class="cell tile">
         <span class="tile-n">01</span>
         <h3>Research first</h3>
-        <p>Listen to the people living the problem. Change direction when the evidence says so.</p>
+        <p>We start by listening to the people living the problem.</p>
         <div class="bars" aria-hidden="true"><i style="--h:38%"></i><i style="--h:62%"></i><i style="--h:48%"></i><i style="--h:80%"></i><i style="--h:70%"></i><i style="--h:92%"></i></div>
       </article>
       <article class="cell tile night">
         <span class="tile-n">02</span>
-        <h3>Thoughtful design</h3>
-        <p>Every feature earns its place. Who does it help, and who might it leave out?</p>
+        <h3>Purposeful design</h3>
+        <p>Every feature has to earn its place.</p>
         <div class="orbit" aria-hidden="true"><span></span><span></span><span></span></div>
       </article>
       <article class="cell tile">
         <span class="tile-n">03</span>
-        <h3>Human in the Middle</h3>
-        <p>AI drafts and suggests. People review and decide. Nothing is sent until you say so.</p>
+        <h3>Secure by default</h3>
+        <p>Your data is protected and only used for what you asked.</p>
+        <svg class="lock" viewBox="0 0 120 120" aria-hidden="true"><rect x="22" y="52" width="76" height="58" rx="14" fill="var(--sage-tint)"/><path d="M40 52V38a20 20 0 0 1 40 0v14" fill="none" stroke="var(--sage)" stroke-width="10" stroke-linecap="round"/><circle cx="60" cy="78" r="8" fill="var(--sage)"/><rect x="56" y="80" width="8" height="16" rx="4" fill="var(--sage)"/></svg>
+      </article>
+    </div>
+    <div class="row r-2">
+      <article class="cell tile night">
+        <span class="tile-n">04</span>
+        <h3>Honest AI</h3>
+        <p>It checks its own work and would rather leave a gap than make something up.</p>
+        <ul class="facts" aria-hidden="true"><li class="ok">Sourced</li><li class="ok">Checked</li><li class="gap">Unable to verify</li></ul>
+      </article>
+      <article class="cell tile">
+        <span class="tile-n">05</span>
+        <h3>People decide</h3>
+        <p>AI drafts and suggests. You make the call.</p>
         <div class="ring-wrap"><svg class="ring-svg" viewBox="0 0 120 120" role="img" aria-label="Four of four checks passed"><circle class="ring-bg" cx="60" cy="60" r="50"/><circle class="ring-fg" cx="60" cy="60" r="50"/></svg><span class="ring-t"><b>4/4</b>checks</span></div>
       </article>
+    </div>
     </div>
   </section>
 
@@ -431,7 +484,7 @@
       <h2 id="founder-h">Work hard. <br>Be kind. <br>Stay curious.</h2>
       <blockquote>&ldquo;I keep coming back to one question: how can this help someone have a better day?&rdquo;</blockquote>
       <p>I&rsquo;m Marcos Cuellar. I build products and systems around how people actually think, work, and live. My work starts with paying attention: where people get stuck, what takes too much effort, what could work better.</p>
-      <p>ELIPAN is a tribute to my mother. Her joy, hard work and mission of seeing others thrive is the spirit behind everything we do.</p>
+      <p>ELIPAN is named for my mother. Her joy, her hard work and her drive to see others thrive are the spirit behind everything we build.</p>
       <ul class="creds" aria-label="Background">
         <li><b>Duke University</b><span>Outcomes and purposeful design</span></li>
         <li><b>Nearly 4 years</b><span>Behind NENEMI</span></li>
@@ -539,6 +592,106 @@
         (function tick(t) { var p = Math.min(1, (t - t0) / 900); el.textContent = Math.round(to * (1 - Math.pow(1 - p, 3))); if (p < 1) requestAnimationFrame(tick); })(t0);
       });
     }
+  })();
+</script>
+
+<!-- Brand stories: public marketing copy only -->
+<dialog class="ep-dlg" id="ep-nenemi" aria-labelledby="ep-nenemi-t">
+ <div class="ep-in">
+  <div class="ep-ph"><img src="/img/nenemi.webp" alt="" decoding="async"><button class="ep-x" type="button" aria-label="Close">×</button></div>
+  <div class="ep-body">
+   <div class="ep-tags"><span class="tag ep-st">Live</span><span class="tag">ADHD workspace</span></div>
+   <h2 id="ep-nenemi-t">NENEMI</h2>
+   <p class="ep-tag">Keep your place.</p>
+   <div class="ep-sec"><h3>The problem</h3><p>You lose your list by 10 AM, hit a wall by 1 PM and feel spent by 5.</p></div>
+   <div class="ep-sec"><h3>Who it&rsquo;s for</h3><p>Non-linear and ADHD minds.</p></div>
+   <div class="ep-sec"><h3>What you get</h3><ul><li>It remembers where you left off, so you don&rsquo;t lose your place</li><li>One small next move, not a mountain</li><li>A short Today view. The rest waits safely</li><li>When you freeze, it shrinks the first step until it feels doable</li><li>Your plan shows up in your calendar</li></ul></div>
+   <div class="ep-sec"><h3>The name</h3><p>From Nahuatl, &ldquo;to walk&rdquo; or &ldquo;to go about.&rdquo; Your path doesn&rsquo;t have to be straight to keep moving.</p></div>
+   <a class="btn btn-primary ep-go" href="https://www.mynenemi.com/" target="_blank" rel="noopener">Visit mynenemi.com <span class="arr" aria-hidden="true">→</span></a>
+  </div>
+ </div>
+</dialog>
+<dialog class="ep-dlg" id="ep-cuepa-work" aria-labelledby="ep-cuepa-work-t">
+ <div class="ep-in">
+  <div class="ep-ph"><img src="/img/cuepa-work.webp" alt="" decoding="async"><button class="ep-x" type="button" aria-label="Close">×</button></div>
+  <div class="ep-body">
+   <div class="ep-tags"><span class="tag ep-st">Live</span><span class="tag">Small-business workflows</span></div>
+   <h2 id="ep-cuepa-work-t">CUEPA for Work</h2>
+   <p class="ep-tag">Make the work easier to follow.</p>
+   <div class="ep-sec"><h3>The problem</h3><p>Busywork eats the day. Knowledge workers can spend 50&ndash;60% of their time coordinating work instead of doing it.</p></div>
+   <div class="ep-sec"><h3>Who it&rsquo;s for</h3><p>Small-business owners, managers and their teams.</p></div>
+   <div class="ep-sec"><h3>What you get</h3><ul><li>The repetitive work taken off your plate</li><li>More room for bigger things</li><li>People decide. You make the call</li></ul></div>
+   <div class="ep-sec"><h3>The name</h3><p>From Nahuatl, &ldquo;to turn&rdquo; or &ldquo;to return.&rdquo; Turning time back to the work that matters.</p></div>
+   <a class="btn btn-primary ep-go" href="https://www.makingcuepa.com/" target="_blank" rel="noopener">Visit makingcuepa.com <span class="arr" aria-hidden="true">→</span></a>
+  </div>
+ </div>
+</dialog>
+<dialog class="ep-dlg" id="ep-cuepa-you" aria-labelledby="ep-cuepa-you-t">
+ <div class="ep-in">
+  <div class="ep-ph"><img src="/img/cuepa-you.webp" alt="" decoding="async"><button class="ep-x" type="button" aria-label="Close">×</button></div>
+  <div class="ep-body">
+   <div class="ep-tags"><span class="tag ep-st">Live</span><span class="tag">Everyday life</span></div>
+   <h2 id="ep-cuepa-you-t">CUEPA for You</h2>
+   <p class="ep-tag">Make everyday life easier to run.</p>
+   <div class="ep-sec"><h3>The problem</h3><p>AI feels like one more thing to keep up with. A new must-have every day, and nobody shows you where to start.</p></div>
+   <div class="ep-sec"><h3>Who it&rsquo;s for</h3><p>Beginners who feel behind on AI, for personal life (not business).</p></div>
+   <div class="ep-sec"><h3>What you get</h3><ul><li>One-on-one help, just you and us, start to finish</li><li>Join from your couch or kitchen table</li><li>No experience needed. Come as you are</li><li>Your own AI command center to keep after the call</li></ul></div>
+   <div class="ep-sec"><h3>The name</h3><p>From Nahuatl, &ldquo;to turn&rdquo; or &ldquo;to return.&rdquo; Turning time back to the parts of life that matter.</p></div>
+   <a class="btn btn-primary ep-go" href="https://you.makingcuepa.com/" target="_blank" rel="noopener">Visit you.makingcuepa.com <span class="arr" aria-hidden="true">→</span></a>
+  </div>
+ </div>
+</dialog>
+<dialog class="ep-dlg" id="ep-ollin-os" aria-labelledby="ep-ollin-os-t">
+ <div class="ep-in">
+  <div class="ep-ph"><img src="/img/ollin-os.webp" alt="" decoding="async"><button class="ep-x" type="button" aria-label="Close">×</button></div>
+  <div class="ep-body">
+   <div class="ep-tags"><span class="tag ep-st">Live</span><span class="tag">Staffing sales intelligence</span></div>
+   <h2 id="ep-ollin-os-t">&#332;LLIN OS/GO</h2>
+   <p class="ep-tag">We find the signal. You build the relationship.</p>
+   <div class="ep-sec"><h3>The problem</h3><p>73% of B2B buyers avoid suppliers that send irrelevant outreach. Sellers need a real reason to reach out.</p></div>
+   <div class="ep-sec"><h3>Who it&rsquo;s for</h3><p>Staffing salespeople.</p></div>
+   <div class="ep-sec"><h3>What you get</h3><ul><li>Relevant signals, with a clear next move</li><li>Context on the account and the people</li><li>Evidence you can check yourself</li><li>&#332;LLIN GO turns signals into personal outreach drafts</li><li>Nothing sends without your yes</li></ul></div>
+   <div class="ep-sec"><h3>The name</h3><p>From Nahuatl, &ldquo;movement.&rdquo; Keeping your sales moving.</p></div>
+   <a class="btn btn-primary ep-go" href="https://www.ollinos.com/" target="_blank" rel="noopener">Visit ollinos.com <span class="arr" aria-hidden="true">→</span></a>
+  </div>
+ </div>
+</dialog>
+<script>
+  // Brand stories: the tapped tile grows into its story panel (motion.dev style).
+  // Only opens and closes panels. No data, no app logic. Without JavaScript, tiles link to each site.
+  (function () {
+    var calm = matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var ease = 'cubic-bezier(.2,.7,.2,1)', current = null;
+    function morph(dlg, card, opening) {
+      var a = card.getBoundingClientRect(), b = dlg.getBoundingClientRect();
+      var from = 'translate(' + (a.left - b.left) + 'px,' + (a.top - b.top) + 'px) scale(' + (a.width / b.width) + ',' + (a.height / b.height) + ')';
+      var k = opening ? [{ transform: from }, { transform: 'none' }] : [{ transform: 'none' }, { transform: from }];
+      var inner = dlg.querySelector('.ep-in');
+      inner.animate(opening ? [{ opacity: 0 }, { opacity: 1 }] : [{ opacity: 1 }, { opacity: 0 }], { duration: opening ? 260 : 140, delay: opening ? 140 : 0, easing: 'ease', fill: 'both' });
+      return dlg.animate(k, { duration: opening ? 460 : 340, easing: ease, fill: 'both' });
+    }
+    function open(card) {
+      var dlg = document.getElementById(card.getAttribute('data-story'));
+      if (!dlg || typeof dlg.showModal !== 'function') return false;
+      dlg.showModal(); current = { dlg: dlg, card: card };
+      if (!calm && dlg.animate) { card.classList.add('ep-hide'); morph(dlg, card, true); }
+      return true;
+    }
+    function close() {
+      if (!current) return; var c = current; current = null;
+      function done() { c.dlg.getAnimations().forEach(function (x) { x.cancel(); }); c.dlg.querySelector('.ep-in').getAnimations().forEach(function (x) { x.cancel(); }); c.dlg.close(); c.card.classList.remove('ep-hide'); c.card.focus({ preventScroll: true }); }
+      if (calm || !c.dlg.animate) return done();
+      c.dlg.querySelector('.ep-in').scrollTop = 0;
+      morph(c.dlg, c.card, false).onfinish = done;
+    }
+    document.querySelectorAll('.brand[data-story]').forEach(function (card) {
+      card.addEventListener('click', function (e) { if (e.metaKey || e.ctrlKey || e.shiftKey) return; if (open(card)) e.preventDefault(); });
+    });
+    document.querySelectorAll('.ep-dlg').forEach(function (dlg) {
+      dlg.querySelector('.ep-x').addEventListener('click', close);
+      dlg.addEventListener('click', function (e) { if (e.target === dlg) close(); });
+      dlg.addEventListener('cancel', function (e) { e.preventDefault(); close(); });
+    });
   })();
 </script>
 </body>
