@@ -185,6 +185,34 @@
   .ep-sec p, .ep-sec ul { margin: 0; font-size: 16px; line-height: 1.6; color: var(--ink); }
   .ep-sec ul { padding-left: 20px; } .ep-sec li + li { margin-top: 4px; }
   .ep-go { margin-top: 26px; width: 100%; }
+  /* App Store style: full-photo cards, the tapped card grows into its story */
+  .brands.bento > .brand { position: relative; min-height: clamp(380px, 34vw, 480px); border-radius: 22px; transition: transform 220ms var(--ease), box-shadow 250ms ease; }
+  .brands.bento > .brand:hover { translate: none; box-shadow: var(--shadow-lift); }
+  .brands.bento > .brand:active { transform: scale(.97); }
+  .brands.bento .photo { position: absolute; inset: 0; margin: 0; border-radius: 0; aspect-ratio: auto; }
+  .brands.bento .photo::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,0) 30%, rgba(0,0,0,.45) 55%, rgba(0,0,0,.9) 100%); }
+  .brands.bento .brand-body { position: relative; z-index: 1; margin-top: auto; flex: none; padding: 28px 28px 26px; gap: 8px; color: #FFFFFF; }
+  .brands.bento .tag { background: rgba(0,0,0,.45); color: #FFFFFF; backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
+  .brands.bento .brand h3 { color: #FFFFFF; font-size: clamp(30px, 3vw, 40px); }
+  .brands.bento .brand p { color: rgba(255,255,255,.88); }
+  .brands.bento .brand .go { border-top-color: rgba(255,255,255,.22); color: #FFFFFF; }
+  .brands.bento .brand .dom { color: rgba(255,255,255,.75); }
+  .brands.bento .brand .more-i i { background: rgba(255,255,255,.2); color: #FFFFFF; }
+  .ep-ph { aspect-ratio: 4 / 3; margin: 0; border-radius: 0; }
+  .ep-ph::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,0) 25%, rgba(0,0,0,.5) 55%, rgba(0,0,0,.9) 100%); pointer-events: none; }
+  .ep-body > .ep-sec:first-child { border-top: 0; padding-top: 4px; }
+  .ep-over { position: absolute; left: 0; right: 0; bottom: 0; z-index: 1; padding: 0 clamp(22px, 4vw, 36px) 26px; color: #FFFFFF; }
+  .ep-over .tag { background: rgba(0,0,0,.45); color: #FFFFFF; backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
+  .ep-over .ep-st::before { background: #B9D1B5; }
+  .ep-over h2 { color: #FFFFFF; }
+  .ep-over .ep-tag { color: rgba(255,255,255,.88); }
+  .ep-x { z-index: 2; }
+  .ep-dlg { border-radius: 22px; }
+  ::view-transition-group(ep-card) { animation-duration: 480ms; animation-timing-function: cubic-bezier(.2,.8,.2,1); }
+  ::view-transition-old(ep-card), ::view-transition-new(ep-card) { height: 100%; width: 100%; object-fit: cover; object-position: top; }
+  ::view-transition-old(ep-card) { animation: none; opacity: 0; }
+  ::view-transition-new(ep-card) { animation: none; }
+
   .more { margin-top: 28px; color: var(--muted); font-size: 15px; }
 
   /* contact form */
@@ -598,11 +626,10 @@
 <!-- Brand stories: public marketing copy only -->
 <dialog class="ep-dlg" id="ep-nenemi" aria-labelledby="ep-nenemi-t">
  <div class="ep-in">
-  <div class="ep-ph"><img src="/img/nenemi.webp" alt="" decoding="async"><button class="ep-x" type="button" aria-label="Close">×</button></div>
+  <div class="ep-ph"><img src="/img/nenemi.webp" alt="" decoding="async">
+   <div class="ep-over"><div class="ep-tags"><span class="tag ep-st">Live</span><span class="tag">ADHD workspace</span></div><h2 id="ep-nenemi-t">NENEMI</h2><p class="ep-tag">Keep your place.</p></div>
+   <button class="ep-x" type="button" aria-label="Close">×</button></div>
   <div class="ep-body">
-   <div class="ep-tags"><span class="tag ep-st">Live</span><span class="tag">ADHD workspace</span></div>
-   <h2 id="ep-nenemi-t">NENEMI</h2>
-   <p class="ep-tag">Keep your place.</p>
    <div class="ep-sec"><h3>The problem</h3><p>You lose your list by 10 AM, hit a wall by 1 PM and feel spent by 5.</p></div>
    <div class="ep-sec"><h3>Who it&rsquo;s for</h3><p>Non-linear and ADHD minds.</p></div>
    <div class="ep-sec"><h3>What you get</h3><ul><li>It remembers where you left off, so you don&rsquo;t lose your place</li><li>One small next move, not a mountain</li><li>A short Today view. The rest waits safely</li><li>When you freeze, it shrinks the first step until it feels doable</li><li>Your plan shows up in your calendar</li></ul></div>
@@ -613,11 +640,10 @@
 </dialog>
 <dialog class="ep-dlg" id="ep-cuepa-work" aria-labelledby="ep-cuepa-work-t">
  <div class="ep-in">
-  <div class="ep-ph"><img src="/img/cuepa-work.webp" alt="" decoding="async"><button class="ep-x" type="button" aria-label="Close">×</button></div>
+  <div class="ep-ph"><img src="/img/cuepa-work.webp" alt="" decoding="async">
+   <div class="ep-over"><div class="ep-tags"><span class="tag ep-st">Live</span><span class="tag">Small-business workflows</span></div><h2 id="ep-cuepa-work-t">CUEPA for Work</h2><p class="ep-tag">Make the work easier to follow.</p></div>
+   <button class="ep-x" type="button" aria-label="Close">×</button></div>
   <div class="ep-body">
-   <div class="ep-tags"><span class="tag ep-st">Live</span><span class="tag">Small-business workflows</span></div>
-   <h2 id="ep-cuepa-work-t">CUEPA for Work</h2>
-   <p class="ep-tag">Make the work easier to follow.</p>
    <div class="ep-sec"><h3>The problem</h3><p>Busywork eats the day. Knowledge workers can spend 50&ndash;60% of their time coordinating work instead of doing it.</p></div>
    <div class="ep-sec"><h3>Who it&rsquo;s for</h3><p>Small-business owners, managers and their teams.</p></div>
    <div class="ep-sec"><h3>What you get</h3><ul><li>The repetitive work taken off your plate</li><li>More room for bigger things</li><li>People decide. You make the call</li></ul></div>
@@ -628,11 +654,10 @@
 </dialog>
 <dialog class="ep-dlg" id="ep-cuepa-you" aria-labelledby="ep-cuepa-you-t">
  <div class="ep-in">
-  <div class="ep-ph"><img src="/img/cuepa-you.webp" alt="" decoding="async"><button class="ep-x" type="button" aria-label="Close">×</button></div>
+  <div class="ep-ph"><img src="/img/cuepa-you.webp" alt="" decoding="async">
+   <div class="ep-over"><div class="ep-tags"><span class="tag ep-st">Live</span><span class="tag">Everyday life</span></div><h2 id="ep-cuepa-you-t">CUEPA for You</h2><p class="ep-tag">Make everyday life easier to run.</p></div>
+   <button class="ep-x" type="button" aria-label="Close">×</button></div>
   <div class="ep-body">
-   <div class="ep-tags"><span class="tag ep-st">Live</span><span class="tag">Everyday life</span></div>
-   <h2 id="ep-cuepa-you-t">CUEPA for You</h2>
-   <p class="ep-tag">Make everyday life easier to run.</p>
    <div class="ep-sec"><h3>The problem</h3><p>AI feels like one more thing to keep up with. A new must-have every day, and nobody shows you where to start.</p></div>
    <div class="ep-sec"><h3>Who it&rsquo;s for</h3><p>Beginners who feel behind on AI, for personal life (not business).</p></div>
    <div class="ep-sec"><h3>What you get</h3><ul><li>One-on-one help, just you and us, start to finish</li><li>Join from your couch or kitchen table</li><li>No experience needed. Come as you are</li><li>Your own AI command center to keep after the call</li></ul></div>
@@ -643,11 +668,10 @@
 </dialog>
 <dialog class="ep-dlg" id="ep-ollin-os" aria-labelledby="ep-ollin-os-t">
  <div class="ep-in">
-  <div class="ep-ph"><img src="/img/ollin-os.webp" alt="" decoding="async"><button class="ep-x" type="button" aria-label="Close">×</button></div>
+  <div class="ep-ph"><img src="/img/ollin-os.webp" alt="" decoding="async">
+   <div class="ep-over"><div class="ep-tags"><span class="tag ep-st">Live</span><span class="tag">Staffing sales intelligence</span></div><h2 id="ep-ollin-os-t">&#332;LLIN OS/GO</h2><p class="ep-tag">We find the signal. You build the relationship.</p></div>
+   <button class="ep-x" type="button" aria-label="Close">×</button></div>
   <div class="ep-body">
-   <div class="ep-tags"><span class="tag ep-st">Live</span><span class="tag">Staffing sales intelligence</span></div>
-   <h2 id="ep-ollin-os-t">&#332;LLIN OS/GO</h2>
-   <p class="ep-tag">We find the signal. You build the relationship.</p>
    <div class="ep-sec"><h3>The problem</h3><p>73% of B2B buyers avoid suppliers that send irrelevant outreach. Sellers need a real reason to reach out.</p></div>
    <div class="ep-sec"><h3>Who it&rsquo;s for</h3><p>Staffing salespeople.</p></div>
    <div class="ep-sec"><h3>What you get</h3><ul><li>Relevant signals, with a clear next move</li><li>Context on the account and the people</li><li>Evidence you can check yourself</li><li>&#332;LLIN GO turns signals into personal outreach drafts</li><li>Nothing sends without your yes</li></ul></div>
@@ -657,32 +681,28 @@
  </div>
 </dialog>
 <script>
-  // Brand stories: the tapped tile grows into its story panel (motion.dev style).
-  // Only opens and closes panels. No data, no app logic. Without JavaScript, tiles link to each site.
+  // Brand stories, App Store style: the tapped card grows into its story (shared-element view transition).
+  // Only opens and closes panels. No data, no app logic. Without JavaScript, cards link to each site.
   (function () {
     var calm = matchMedia('(prefers-reduced-motion: reduce)').matches;
-    var ease = 'cubic-bezier(.2,.7,.2,1)', current = null;
-    function morph(dlg, card, opening) {
-      var a = card.getBoundingClientRect(), b = dlg.getBoundingClientRect();
-      var from = 'translate(' + (a.left - b.left) + 'px,' + (a.top - b.top) + 'px) scale(' + (a.width / b.width) + ',' + (a.height / b.height) + ')';
-      var k = opening ? [{ transform: from }, { transform: 'none' }] : [{ transform: 'none' }, { transform: from }];
-      var inner = dlg.querySelector('.ep-in');
-      inner.animate(opening ? [{ opacity: 0 }, { opacity: 1 }] : [{ opacity: 1 }, { opacity: 0 }], { duration: opening ? 260 : 140, delay: opening ? 140 : 0, easing: 'ease', fill: 'both' });
-      return dlg.animate(k, { duration: opening ? 460 : 340, easing: ease, fill: 'both' });
+    var vt = !calm && typeof document.startViewTransition === 'function';
+    var current = null;
+    function swap(from, to, change) {
+      if (!vt) { change(); return Promise.resolve(); }
+      from.style.viewTransitionName = 'ep-card';
+      var t = document.startViewTransition(function () { from.style.viewTransitionName = ''; change(); to.style.viewTransitionName = 'ep-card'; });
+      return t.finished.finally(function () { to.style.viewTransitionName = ''; });
     }
     function open(card) {
       var dlg = document.getElementById(card.getAttribute('data-story'));
       if (!dlg || typeof dlg.showModal !== 'function') return false;
-      dlg.showModal(); current = { dlg: dlg, card: card };
-      if (!calm && dlg.animate) { card.classList.add('ep-hide'); morph(dlg, card, true); }
+      current = { dlg: dlg, card: card };
+      swap(card, dlg, function () { dlg.showModal(); dlg.querySelector('.ep-in').scrollTop = 0; card.classList.add('ep-hide'); });
       return true;
     }
     function close() {
       if (!current) return; var c = current; current = null;
-      function done() { c.dlg.getAnimations().forEach(function (x) { x.cancel(); }); c.dlg.querySelector('.ep-in').getAnimations().forEach(function (x) { x.cancel(); }); c.dlg.close(); c.card.classList.remove('ep-hide'); c.card.focus({ preventScroll: true }); }
-      if (calm || !c.dlg.animate) return done();
-      c.dlg.querySelector('.ep-in').scrollTop = 0;
-      morph(c.dlg, c.card, false).onfinish = done;
+      swap(c.dlg, c.card, function () { c.dlg.close(); c.card.classList.remove('ep-hide'); }).then(function () { c.card.focus({ preventScroll: true }); });
     }
     document.querySelectorAll('.brand[data-story]').forEach(function (card) {
       card.addEventListener('click', function (e) { if (e.metaKey || e.ctrlKey || e.shiftKey) return; if (open(card)) e.preventDefault(); });
