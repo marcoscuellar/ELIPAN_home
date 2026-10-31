@@ -125,7 +125,7 @@
   @media (max-width: 600px) { .section { padding: 52px 8px 0; } .section .brands { gap: 12px; } .section-heading { margin-bottom: 36px; } .section-heading h2 { font-size: clamp(34px, 9.5vw, 40px); margin-top: 28px; } .section-heading p { font-size: 16px; } }
   /* founder (matches ollinos.com) */
   .founder { display: grid; grid-template-columns: 1fr 1fr; margin: 28px 16px 0; border-radius: var(--panel-r); background: var(--card); box-shadow: var(--shadow-card); overflow: hidden; }
-  .founder-image { min-height: 560px; position: relative; background: linear-gradient(160deg, #2a2f2a, #0A0A0A); }
+  .founder-image { order: 2; min-height: 560px; position: relative; background: linear-gradient(160deg, #2a2f2a, #0A0A0A); }
   .founder-image img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 53% center; }
   .founder-cap { position: absolute; left: 0; right: 0; bottom: 0; padding: 80px 32px 28px; background: linear-gradient(180deg, rgba(0,0,0,0), rgba(0,0,0,.72)); color: #FFFFFF; display: flex; flex-direction: column; gap: 6px; }
   .founder-cap span:first-child { font-family: var(--font-display); font-weight: 700; font-size: 22px; letter-spacing: -.01em; }
@@ -140,7 +140,7 @@
   .founder-signature { display: flex; flex-direction: column; gap: 4px; margin-top: 10px; }
   .founder-signature > span:first-child { font-weight: 600; font-size: 18px; }
   @media (max-width: 850px) { .founder-copy { padding: 36px; } .creds { grid-template-columns: 1fr; } }
-  @media (max-width: 700px) { .founder { grid-template-columns: 1fr; margin: 20px 8px 0; } .founder-image { min-height: 390px; } .founder-image img { object-position: center 30%; } .founder-copy { padding: 32px 26px; } }
+  @media (max-width: 700px) { .founder { grid-template-columns: 1fr; margin: 20px 8px 0; } .founder-image { order: 0; min-height: 390px; } .founder-image img { object-position: center 30%; } .founder-copy { padding: 32px 26px; } }
   /* brand cards: shadow only, never an outline */
   .brands { display: grid; grid-template-columns: repeat(6, 1fr); gap: clamp(24px, 2.4vw, 32px); }
   .brands > .brand { grid-column: span 3; }
