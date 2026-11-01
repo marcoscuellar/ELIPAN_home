@@ -12,6 +12,14 @@
 - CHIMAL, our audit: every draft is checked four ways before it ships (cites its source, a second AI tries to break it, checked line by line, a person decides).
 - Nothing is sent without a person's OK.
 
+## Founder
+- Marcos Cuellar, founder of ELIPAN Group, Chicago.
+- Not an engineer. He learned, built and developed everything in the seat, so he sees AI through process, workflow, hiring and humans.
+- ŌLLIN OS/GO came from his 15+ years in contingent staff augmentation and workforce strategy. NENEMI came from having ADHD and needing support no tool gave him.
+- ELIPAN is named for his mother.
+- Philosophy: will this tool, feature or button make someone more efficient, fulfilled or productive? If not, we don't take it on.
+- Google AI certified.
+
 ## Contact
 - Email: marcoscuellar@elipangroup.com
 - Location: Chicago, IL, US
