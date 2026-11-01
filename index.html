@@ -135,11 +135,8 @@
   .founder-copy blockquote { margin: 0; font-size: 19px; line-height: 1.6; color: var(--ink); font-weight: 500; }
   .founder-copy p { font-size: 16px; line-height: 1.7; color: var(--muted); }
   .creds { list-style: none; margin: 4px 0 0; padding: 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px 20px; }
-  .creds li { display: grid; align-content: start; gap: 6px; padding: 18px 18px 16px; border-radius: var(--r-md); background: var(--raised); font-size: 13px; line-height: 1.45; color: var(--muted); transition: transform .25s var(--ease), box-shadow .25s var(--ease); }
-  .creds li::before { content: ""; width: 22px; height: 3px; border-radius: 2px; background: var(--sage); margin-bottom: 6px; }
-  .creds li:hover { transform: translateY(-2px); box-shadow: var(--shadow-card); }
-  .creds b { color: var(--ink); font-family: var(--font-display); font-size: 22px; font-weight: 700; letter-spacing: -.02em; line-height: 1.1; }
-  @media (prefers-reduced-motion: reduce) { .creds li { transition: none; } .creds li:hover { transform: none; } }
+  .creds li { display: grid; justify-items: start; align-content: start; gap: 6px; padding-top: 12px; border-top: 1px solid var(--line); font-size: 13px; line-height: 1.45; color: var(--muted); }
+  .creds b { color: var(--sage-ink); background: var(--sage-tint); font-size: 13px; font-weight: 600; padding: 3px 10px; border-radius: var(--r-pill); }
   .founder-signature { display: flex; flex-direction: column; gap: 4px; margin-top: 10px; }
   .founder-signature > span:first-child { font-weight: 600; font-size: 18px; }
   @media (max-width: 850px) { .founder-copy { padding: 36px; } .creds { grid-template-columns: 1fr; } }
