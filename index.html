@@ -276,7 +276,6 @@
   .why-copy { margin-top: 28px; display: grid; gap: 14px; }
   .why-copy p { font-size: 16px; line-height: 1.7; color: var(--muted); }
   .why-copy b { color: var(--ink); font-weight: 600; }
-  .chimal-cell { margin-top: var(--gap); }
   /* CHIMAL pipeline */
   .pipe { margin-top: 36px; position: relative; --dur: 6s; }
   .pipe-track { position: absolute; left: 22px; right: 22px; top: 21px; height: 2px; background: var(--line); border-radius: 2px; }
@@ -425,17 +424,8 @@
     </div>
   </div></section>
 
-  <!-- 2. Why we exist: photo quote + the story behind ELIPAN -->
+  <!-- 2. Why we exist + CHIMAL, side by side -->
   <div class="row r-2">
-    <section class="cell quote-cell" aria-labelledby="quote-h" data-float>
-      <img class="qc-img" src="/img/chicago.webp" width="1168" height="784" decoding="async" alt="A busy downtown Chicago street at golden hour, people crossing on wet pavement while a bus and taxi roll by">
-      <div class="qc-shade" aria-hidden="true"></div>
-      <figure class="qc">
-        <p class="eyebrow" id="quote-h">ŌLLIN · movement</p>
-        <blockquote><p>&ldquo;Life keeps moving. The best tools move with you, so every step flows into the next.&rdquo;</p></blockquote>
-        <figcaption>ELIPAN Group · Chicago</figcaption>
-      </figure>
-    </section>
     <section class="cell why-cell" id="why" aria-labelledby="why-h" data-float>
       <p class="eyebrow">Why we exist</p>
       <h2 id="why-h" class="cell-h">Too much time on systems. Not enough left for life.</h2>
@@ -444,6 +434,19 @@
         <p><b>It started with curiosity.</b> I&rsquo;m not an engineer. I learned, built and developed everything while I was in the seat, so I see AI through process, workflow, hiring and humans.</p>
         <p>ŌLLIN came from over 15 years in contingent staff augmentation and workforce strategy. NENEMI came from having ADHD and needing support that none of the tools I tried really gave me.</p>
         <p>Both came from the same place. ELIPAN is the answer we keep building. Each brand makes one of those systems easier.</p>
+      </div>
+    </section>
+    <section class="cell" aria-labelledby="chimal-h" data-float>
+      <p class="eyebrow">CHIMAL · Our promise to you</p>
+      <h2 id="chimal-h" class="cell-h">From the get-go, nothing ships until it survives its own audit.</h2>
+      <div class="pipe" role="img" aria-label="Diagram: every draft moves through four checks in order: Protect, Challenge, Verify, then Human in the Middle, before anything is sent.">
+        <div class="pipe-track"><span class="pipe-dot"></span></div>
+        <ol class="pipe-steps">
+          <li style="--i:0"><span class="node">1</span><b>Protect</b><small>Cites its source</small></li>
+          <li style="--i:1"><span class="node">2</span><b>Challenge</b><small>A second AI tries to break it</small></li>
+          <li style="--i:2"><span class="node">3</span><b>Verify</b><small>Checked line by line</small></li>
+          <li style="--i:3"><span class="node">4</span><b>Human</b><small>A person decides</small></li>
+        </ol>
       </div>
     </section>
   </div>
@@ -519,20 +522,6 @@
       </article>
     </div>
     </div>
-
-      <div class="cell chimal-cell" aria-labelledby="chimal-h" data-float>
-        <p class="eyebrow">CHIMAL · Our promise to you</p>
-        <h3 id="chimal-h" class="cell-h">From the get-go, nothing ships until it survives its own audit.</h3>
-        <div class="pipe" role="img" aria-label="Diagram: every draft moves through four checks in order: Protect, Challenge, Verify, then Human in the Middle, before anything is sent.">
-          <div class="pipe-track"><span class="pipe-dot"></span></div>
-          <ol class="pipe-steps">
-            <li style="--i:0"><span class="node">1</span><b>Protect</b><small>Cites its source</small></li>
-            <li style="--i:1"><span class="node">2</span><b>Challenge</b><small>A second AI tries to break it</small></li>
-            <li style="--i:2"><span class="node">3</span><b>Verify</b><small>Checked line by line</small></li>
-            <li style="--i:3"><span class="node">4</span><b>Human</b><small>A person decides</small></li>
-          </ol>
-        </div>
-      </div>
   </section>
 
   <!-- Founder: same layout as the founder section on ollinos.com -->
