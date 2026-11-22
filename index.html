@@ -452,6 +452,19 @@
   /* dark panels: forest night */
   .cell.night .eyebrow, .tile.night .tile-n { color: #9FB07A; }
   .names { color: #9FB07A; }
+  /* hero: forest photo with a glass card */
+  #top.hero-photo { position: relative; overflow: hidden; padding: 0; min-height: min(86vh, 820px); display: flex; align-items: flex-end; background: #0F120F; }
+  #top.hero-photo .hero-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 62%; }
+  #top.hero-photo .w.hero { position: relative; width: auto; max-width: 640px; margin: clamp(16px, 3vw, 40px); padding: clamp(28px, 3.4vw, 48px); text-align: left; background: var(--glass); backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px); border: 1px solid var(--glass-edge); border-radius: 4px; color: var(--glass-ink); }
+  #top.hero-photo .hero-mark { width: 56px; height: 56px; margin: 0 0 24px; color: var(--glass-ink); }
+  #top.hero-photo h1 { margin-top: 14px; font-size: clamp(42px, 5.6vw, 80px); }
+  #top.hero-photo .lead { margin: 20px 0 0; color: var(--glass-muted); max-width: 480px; }
+  #top.hero-photo .btns { margin-top: 32px; justify-content: flex-start; }
+  @media (max-width: 700px) {
+    #top.hero-photo { display: block; min-height: 0; background: var(--card); }
+    #top.hero-photo .hero-bg { position: relative; height: 340px; }
+    #top.hero-photo .w.hero { margin: -28px 12px 12px; }
+  }
 </style>
 </head>
 <body>
@@ -490,7 +503,7 @@
 
 <main id="main">
   <!-- 1. Hero -->
-  <section class="frame" id="top" aria-label="Introduction"><div class="w hero" data-float>
+  <section class="frame hero-photo" id="top" aria-label="Introduction"><img class="hero-bg" src="/img/forest-home.webp" width="2400" height="1350" alt="Two friends laughing and two dogs running on a mossy path outside a long, low glass house in a green forest" fetchpriority="high" decoding="async"><div class="w hero" data-float>
     <svg class="hero-mark" viewBox="0 0 200 200" role="img" aria-label="ELIPAN mark: five nested hexagons around a sage core"><g fill="none" stroke="currentColor"><polygon class="ring" stroke-width="9" points="100,10 177.9,55 177.9,145 100,190 22.1,145 22.1,55"/><polygon class="ring" stroke-width="10.95" points="100,10 177.9,55 177.9,145 100,190 22.1,145 22.1,55" transform="translate(100 92) scale(0.822) translate(-100 -100)"/><polygon class="ring" stroke-width="13.98" points="100,10 177.9,55 177.9,145 100,190 22.1,145 22.1,55" transform="translate(100 84) scale(0.644) translate(-100 -100)"/><polygon class="ring" stroke-width="19.27" points="100,10 177.9,55 177.9,145 100,190 22.1,145 22.1,55" transform="translate(100 76) scale(0.467) translate(-100 -100)"/><polygon class="ring" stroke-width="31.1" points="100,10 177.9,55 177.9,145 100,190 22.1,145 22.1,55" transform="translate(100 68) scale(0.289) translate(-100 -100)"/></g><g transform="translate(100 62) scale(0.13) translate(-100 -100)"><polygon class="core" fill="#8FAE8B" points="100,10 177.9,55 177.9,145 100,190 22.1,145 22.1,55"/></g></svg>
     <p class="eyebrow">Intelligent design to enhance human life.</p>
     <h1><span class="ln"><span>AI, built around</span></span> <span class="ln"><span>human life.</span></span></h1>
