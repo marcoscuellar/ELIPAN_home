@@ -475,6 +475,31 @@
   #top.hero-photo h1 { margin-top: 14px; font-size: clamp(36px, 4.4vw, 60px); line-height: 1.02; color: var(--ink); }
   #top.hero-photo .lead { margin: 16px 0 0; font-size: 17px; color: var(--muted); max-width: 420px; }
   #top.hero-photo .btns { margin-top: 26px; justify-content: flex-start; }
+  /* more room everywhere */
+  :root { --gap: 32px; }
+  main { padding-top: 32px; }
+  .frame { padding: clamp(88px, 10vw, 144px) 0; }
+  .cell { padding: clamp(40px, 5vw, 80px); }
+  .section { padding: clamp(96px, 10vw, 144px) 16px 24px; }
+  .section-heading { margin-bottom: clamp(56px, 6vw, 88px); }
+  .section-heading h2 { margin-top: 48px; }
+  .head { margin-bottom: 80px; }
+  .brands, .brands.bento { gap: 32px; }
+  #philosophy { padding-left: clamp(24px, 4vw, 64px); padding-right: clamp(24px, 4vw, 64px); padding-bottom: clamp(24px, 4vw, 64px); }
+  .founder { margin-top: 56px; }
+  .founder-copy { padding: clamp(40px, 5vw, 80px); gap: 24px; }
+  .why-copy { margin-top: 36px; gap: 18px; }
+  .pipe { margin-top: 48px; }
+  .tile { gap: 16px; }
+  #top.hero-photo .w.hero { max-width: 600px; padding: clamp(40px, 4vw, 64px) clamp(40px, 5vw, 80px) 0 0; }
+  #top.hero-photo h1 { margin-top: 20px; }
+  #top.hero-photo .lead { margin-top: 24px; line-height: 1.65; }
+  #top.hero-photo .btns { margin-top: 40px; gap: 16px; }
+  @media (max-width: 600px) {
+    :root { --gap: 16px; }
+    .cell { padding: 36px 28px; }
+    .section { padding: 72px 8px 0; }
+  }
   @media (max-width: 700px) {
     #top.hero-photo { display: block; min-height: 0; }
     #top.hero-photo .hero-bg { position: relative; height: 360px; }
