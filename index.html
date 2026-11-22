@@ -28,7 +28,7 @@
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
   /* ELIPAN Studio design system tokens */
   :root {
@@ -375,6 +375,83 @@
   @keyframes rise { from { opacity: 0; transform: translateY(28px); } to { opacity: 1; transform: none; } }
 
   @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition: none !important; animation: none !important; } }
+</style>
+<style id="marcos-look">
+  /* ELIPAN Group: The Marcos Look. Straight lines, white space, moss green, glass over photos, thin lines instead of shadows. */
+  :root {
+    --bg:#FFFFFF; --card:#FFFFFF; --raised:#F4F4F1; --ink:#121512; --muted:#5C625A; --line:#E3E4DE; --divider:#C9CBC3;
+    --sage:#4F5B2E; --sage-ink:#4F5B2E; --sage-tint:#EEF0E6; --on-sage:#FFFFFF; --focus:#4F5B2E; --night:#121512;
+    --lamp:#D98C4A;
+    --shadow-card:0 0 0 1px var(--line);
+    --shadow-lift:0 0 0 1px var(--ink);
+    --r-md:4px; --r-lg:4px; --r-xl:4px; --r-pill:4px; --panel-r:4px;
+    --font-mono:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;
+    --glass:rgba(255,255,255,.62); --glass-edge:rgba(255,255,255,.7); --glass-ink:#121512; --glass-muted:#3B403A;
+  }
+  :root[data-theme="dark"] {
+    --bg:#0F120F; --card:#171B17; --raised:#1B201A; --ink:#E8E6DF; --muted:#A3A69C; --line:#262B25; --divider:#3A4037;
+    --sage:#9FB07A; --sage-ink:#9FB07A; --sage-tint:#1E241B; --on-sage:#0F120F; --focus:#9FB07A; --night:#0B0E0B;
+    --shadow-card:0 0 0 1px var(--line);
+    --shadow-lift:0 0 0 1px var(--ink);
+    --glass:rgba(15,18,15,.58); --glass-edge:rgba(255,255,255,.12); --glass-ink:#E8E6DF; --glass-muted:#C9CBC3;
+  }
+
+  /* type: light, quiet headlines */
+  h1, h2, h3 { font-weight: 300; letter-spacing: -.02em; }
+  .hero h1 { font-weight: 300; letter-spacing: -.035em; }
+  .head h2, .section-heading h2, .cell-h, .founder-copy h2, .ep-dlg h2, .roots h3, .done h3 { font-weight: 300; letter-spacing: -.025em; }
+  .brand h3, .tile h3 { font-weight: 400; letter-spacing: -.01em; }
+  .bstat .v { font-weight: 300; }
+  .quote-cell blockquote p { font-weight: 300; letter-spacing: -.015em; }
+  .eyebrow, .tile-n, .sec-rule { color: var(--sage-ink); letter-spacing: .2em; }
+  .sec-rule::before { height: 1px; }
+  .why-start { font-weight: 500; }
+
+  /* buttons: black, straight, calm */
+  .btn { font-weight: 500; letter-spacing: .04em; }
+  .btn-primary { background: var(--ink); color: var(--bg); }
+  .btn-primary:hover { background: var(--sage); color: var(--on-sage); }
+  .btn-quiet { border-color: var(--ink); }
+
+  /* cards: thin lines, no shadows, small corners */
+  .brands.bento > .brand, .ep-dlg { border-radius: 4px; }
+  .photo, .ep-ph { border-radius: 2px; }
+  .bars i { border-radius: 2px; }
+
+  /* fog band behind the white cards */
+  #philosophy { background: var(--raised); padding-left: clamp(16px, 3vw, 40px); padding-right: clamp(16px, 3vw, 40px); padding-bottom: clamp(16px, 3vw, 40px); border-radius: 4px; }
+
+  /* glass cards over photos: brand tiles */
+  .brands.bento .photo::after { background: none; }
+  .brands.bento .brand-body { margin: auto 16px 16px; padding: 22px 24px 20px; background: var(--glass); backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px); border: 1px solid var(--glass-edge); border-radius: 4px; color: var(--glass-ink); }
+  .brands.bento .brand h3 { color: var(--glass-ink); }
+  .brands.bento .brand p { color: var(--glass-muted); }
+  .brands.bento .brand .go { color: var(--glass-ink); border-top-color: var(--line); }
+  .brands.bento .brand .dom { color: var(--glass-muted); }
+  .brands.bento .tag, .ep-over .tag { background: var(--glass); color: var(--glass-ink); border: 1px solid var(--glass-edge); }
+  .brands.bento .brand .more-i i { background: var(--sage-tint); color: var(--sage-ink); }
+
+  /* glass card: story panel */
+  .ep-ph::after { background: none; }
+  .ep-over { left: 16px; right: 16px; bottom: 16px; padding: 20px 24px; background: var(--glass); backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px); border: 1px solid var(--glass-edge); border-radius: 4px; color: var(--glass-ink); }
+  .ep-over h2 { color: var(--glass-ink); }
+  .ep-over .ep-tag { color: var(--glass-muted); }
+  .ep-over .ep-st::before { background: var(--sage); }
+
+  /* glass card: photo + quote */
+  .quote-cell .qc-shade { display: none; }
+  .quote-cell .qc { margin: 16px; padding: clamp(24px, 3vw, 36px); background: var(--glass); backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px); border: 1px solid var(--glass-edge); border-radius: 4px; color: var(--glass-ink); }
+  .quote-cell .eyebrow { color: var(--sage-ink); }
+  .quote-cell figcaption { color: var(--glass-muted); }
+
+  /* glass card: founder caption */
+  .founder-cap { left: 16px; right: auto; bottom: 16px; padding: 16px 20px; background: var(--glass); backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px); border: 1px solid var(--glass-edge); border-radius: 4px; color: var(--glass-ink); }
+  .founder-cap span:first-child { font-weight: 400; }
+  .founder-cap span:last-child { color: var(--glass-muted); }
+
+  /* dark panels: forest night */
+  .cell.night .eyebrow, .tile.night .tile-n { color: #9FB07A; }
+  .names { color: #9FB07A; }
 </style>
 </head>
 <body>
